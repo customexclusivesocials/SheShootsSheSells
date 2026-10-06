@@ -689,32 +689,39 @@
     </footer>
 
     <!-- Interactive Scripts -->
-    <script>
-        lucide.createIcons();
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // 1. Initialize Lucide Icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
 
+        // 2. Mobile Menu Toggle
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () =&gt; {
-            mobileMenu.classList.toggle('hidden');
-        });
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
 
-        document.querySelectorAll('.faq-btn').forEach(button =&gt; {
-            button.addEventListener('click', () =&gt; {
+        // 3. FAQ Accordion Toggle (Handles converted SVG icons safely)
+        document.querySelectorAll('.faq-btn').forEach(button => {
+            button.addEventListener('click', () => {
                 const content = button.nextElementSibling;
-                const icon = button.querySelector('i');
-                content.classList.toggle('hidden');
-                icon.classList.toggle('rotate-180');
+                if (content) {
+                    content.classList.toggle('hidden');
+                }
+                
+                // Finds either svg or i so it doesn't break
+                const icon = button.querySelector('svg') || button.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('rotate-180');
+                }
             });
         });
-
-        const bookingForm = document.getElementById('booking-form');
-        const bookingSuccess = document.getElementById('booking-success');
-        bookingForm.addEventListener('submit', (e) =&gt; {
-            e.preventDefault();
-            bookingForm.classList.add('hidden');
-            bookingSuccess.classList.remove('hidden');
-        });
-    </script>
+    });
+</script>
 </body>
 </html>
 
