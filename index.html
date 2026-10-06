@@ -35,6 +35,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+    @keyframes fluidWaves {
+        0% { transform: translateY(0px) scale(1) rotate(0deg); }
+        50% { transform: translateY(-30px) scale(1.08) rotate(5deg); }
+        100% { transform: translateY(0px) scale(1) rotate(0deg); }
+    }
+    @keyframes shadowPulse {
+        0%, 100% { opacity: 0.45; transform: scale(1); }
+        50% { opacity: 0.65; transform: scale(1.03); }
+    }
+    .animate-fluid-waves {
+        animation: fluidWaves 18s ease-in-out infinite;
+    }
+    .animate-shadow-pulse {
+        animation: shadowPulse 12s ease-in-out infinite;
+    }
+</style>
 </head>
 <body class="bg-gray-950 text-gray-100 font-sans antialiased selection:bg-brand-purple selection:text-white">
 
