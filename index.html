@@ -1,727 +1,406 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>She Shoots She Sells | Premier Female-Led Creator Management Agency</title>
-    <meta name="description" content="Ontario's premier female-led management agency for adult content creators, co-founded by Shraddha &amp; Brooke. Personalized OF growth plans, 24/7 DM chatting, and SFW social media marketing.">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            purple: '#9333EA',
-                            violet: '#C084FC',
-                            soft: '#F3E8FF',
-                            dark: '#0B0712',
-                            card: '#160E24',
-                            accent: '#A855F7'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <!-- Google Fonts &amp; Lucide Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-  
-    <!-- Custom CSS Animations for Dark Animated Background &amp; Waves -->
-    <style>
-        @keyframes fluidWaves {
-            0% { transform: translateY(0px) scale(1) rotate(0deg); }
-            50% { transform: translateY(-30px) scale(1.08) rotate(5deg); }
-            100% { transform: translateY(0px) scale(1) rotate(0deg); }
-        }
-        @keyframes shadowPulse {
-            0%, 100% { opacity: 0.45; transform: scale(1); }
-            50% { opacity: 0.65; transform: scale(1.03); }
-        }
-        .animate-fluid-waves { animation: fluidWaves 18s ease-in-out infinite; }
-        .animate-shadow-pulse { animation: shadowPulse 12s ease-in-out infinite; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>She Shoots She Sells | Female-Led Creator Management Agency, Ontario</title>
+<meta name="description" content="Ontario's female-owned and led creator management agency. Pricing strategy, 24/7 DM chatting and safe social funnels, founded by Shraddha and Brooke.">
+<meta name="theme-color" content="#2a0a12">
+<meta property="og:title" content="She Shoots She Sells | Creator Management Agency">
+<meta property="og:description" content="Female-owned and led creator management in Ontario.">
+<meta property="og:image" content="logo_branding_web_banner.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --oxblood:#240910; --wine:#4a111f; --burgundy:#6e1730; --crimson:#b01c38; --ember:#d6334f;
+  --champagne:#e9c7b4; --ivory:#fbf1ec; --muted:#c9a9a4;
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Manrope",system-ui,-apple-system,Segoe UI,sans-serif;
+  --metal:linear-gradient(135deg,#f3d3c2 0%,#c9876f 45%,#f0c9b6 100%);
+  --glow:0 10px 40px -10px rgba(214,51,79,.55);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--oxblood);color:var(--ivory);font:400 1rem/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(2.8rem,8vw,6rem)}
+h2{font-size:clamp(2rem,4.5vw,3.4rem)}
+h3{font-size:1.6rem}
+p{margin:0 0 1em;max-width:62ch}
+:focus-visible{outline:3px solid var(--champagne);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ivory);color:var(--oxblood);padding:.6rem 1rem;z-index:100;border-radius:6px}
+.skip:focus{left:8px}
+.wrap{width:min(1160px,92%);margin-inline:auto}
+section{padding:clamp(4rem,9vw,7rem) 0}
+.lead{color:var(--muted);font-size:1.1rem}
+.metal{background:var(--metal);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.95rem 1.8rem;border-radius:999px;font:600 .95rem var(--sans);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:linear-gradient(135deg,var(--ember),var(--crimson) 55%,var(--burgundy));color:#fff;box-shadow:var(--glow)}
+.btn-ghost{border-color:rgba(233,199,180,.5);color:var(--champagne)}
+.btn-ghost:hover{background:rgba(233,199,180,.1)}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(36,9,16,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(233,199,180,.15)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font:600 1.5rem var(--serif);text-decoration:none;letter-spacing:.02em}
+.nav ul{display:flex;gap:1.6rem;list-style:none;margin:0;padding:0;font-size:.9rem;font-weight:500}
+.nav ul a{text-decoration:none;color:var(--muted);transition:color .2s}
+.nav ul a:hover{color:var(--ivory)}
+.menu-btn{display:none;background:none;border:1px solid rgba(233,199,180,.4);color:var(--ivory);border-radius:8px;padding:.45rem .8rem;font:inherit;cursor:pointer}
+@media(max-width:900px){
+  .menu-btn{display:block}
+  .nav ul{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:var(--oxblood);padding:1rem 4%;border-bottom:1px solid rgba(233,199,180,.15)}
+  .nav ul.open{display:flex}
+  .nav .btn{display:none}
+}
+
+/* Hero */
+.hero{position:relative;min-height:92vh;display:grid;align-items:end;padding:0;overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-2}
+.hero-media video,.hero-media img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(36,9,16,.94) 8%,rgba(74,17,31,.6) 55%,rgba(36,9,16,.25)),linear-gradient(0deg,var(--oxblood),transparent 35%)}
+.hero-inner{padding:clamp(6rem,14vw,10rem) 0 clamp(3rem,7vw,5rem)}
+.hero p{font-size:1.2rem;color:#eadad5;max-width:52ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
+.tag{display:inline-block;border:1px solid rgba(233,199,180,.45);color:var(--champagne);border-radius:999px;padding:.35rem 1rem;font-size:.85rem;margin-bottom:1.5rem;background:rgba(36,9,16,.4)}
+.hero h1 em{font-style:italic}
+
+/* Proof strip */
+.strip{background:var(--wine);border-block:1px solid rgba(233,199,180,.15);padding:1.6rem 0}
+.strip ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem 2rem;list-style:none;margin:0;padding:0}
+.strip li{font:500 1.25rem var(--serif);color:var(--champagne)}
+.strip small{display:block;font:400 .85rem var(--sans);color:var(--muted)}
+
+/* Two-col */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+@media(max-width:820px){.split{grid-template-columns:1fr}}
+.frame{border-radius:24px;overflow:hidden;border:1px solid rgba(233,199,180,.25);box-shadow:var(--glow)}
+.frame img{width:100%;height:auto}
+
+/* Services */
+.services{background:linear-gradient(180deg,var(--oxblood),var(--wine))}
+.svc{display:grid;gap:0;margin-top:3rem;border-top:1px solid rgba(233,199,180,.25)}
+.svc article{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:2rem;padding:2rem 0;border-bottom:1px solid rgba(233,199,180,.25)}
+.svc h3{margin:0}
+.svc p{margin:0;color:var(--muted)}
+.svc ul{margin:0;padding-left:1.1rem;color:var(--champagne);font-size:.92rem}
+@media(max-width:820px){.svc article{grid-template-columns:1fr;gap:.8rem}}
+
+/* Video showcase */
+.reels{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem}
+@media(max-width:820px){.reels{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:1rem}.reels>*{scroll-snap-align:center}}
+.reel{position:relative;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:var(--wine);border:1px solid rgba(233,199,180,.25)}
+.reel video{width:100%;height:100%;object-fit:cover}
+.reel button{position:absolute;inset:0;width:100%;background:linear-gradient(0deg,rgba(36,9,16,.85),transparent 55%);border:0;color:#fff;cursor:pointer;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:1.2rem;text-align:left;font:600 1rem var(--sans);transition:opacity .3s}
+.reel button span{display:grid;place-items:center;width:54px;height:54px;border-radius:50%;background:var(--crimson);box-shadow:var(--glow);margin-bottom:.8rem;font-size:1.1rem}
+.reel.playing button{opacity:0;pointer-events:none}
+
+/* Offers */
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.25rem;margin-top:3rem}
+.tier{display:flex;flex-direction:column;padding:2rem;border-radius:22px;background:rgba(74,17,31,.55);border:1px solid rgba(233,199,180,.2)}
+.tier.feat{background:linear-gradient(160deg,var(--burgundy),var(--wine));border-color:var(--ember);box-shadow:var(--glow)}
+.price{font:600 2.4rem var(--serif);color:var(--champagne);line-height:1.1}
+.price small{display:block;font:400 .85rem var(--sans);color:var(--muted);margin-top:.3rem}
+.tier ul{list-style:none;padding:0;margin:1.2rem 0 1.8rem;flex:1;font-size:.95rem}
+.tier li{padding:.35rem 0 .35rem 1.6rem;position:relative}
+.tier li::before{content:"";position:absolute;left:0;top:.8rem;width:.7rem;height:.4rem;border-left:2px solid var(--ember);border-bottom:2px solid var(--ember);transform:rotate(-45deg)}
+
+/* Pilot */
+.pilot{background:var(--wine);border-block:1px solid rgba(233,199,180,.15)}
+.shift{padding:1.1rem 1.3rem;border-left:3px solid var(--ember);background:rgba(36,9,16,.5);border-radius:0 14px 14px 0;margin-bottom:.9rem}
+.shift b{display:block;color:var(--champagne)}
+.shift span{color:var(--muted);font-size:.92rem}
+
+/* Founders */
+.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:3rem}
+.person .frame{aspect-ratio:3/4;margin-bottom:1.2rem}
+.person .frame img{height:100%;object-fit:cover}
+.role{color:var(--ember);font-weight:600;font-size:.9rem;margin-bottom:.8rem}
+blockquote{margin:0 0 1rem;font:italic 500 1.25rem/1.4 var(--serif);color:var(--champagne)}
+
+/* FAQ */
+details{border-bottom:1px solid rgba(233,199,180,.25);padding:1.1rem 0}
+summary{cursor:pointer;font:600 1.1rem var(--sans);list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--ember);font-size:1.4rem;line-height:1;transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:.8rem 0 0;color:var(--muted)}
+
+/* Form */
+.book{background:radial-gradient(ellipse at top,var(--burgundy),var(--oxblood) 70%)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;max-width:760px;margin:2.5rem auto 0}
+form .full{grid-column:1/-1}
+@media(max-width:640px){form{grid-template-columns:1fr}}
+label{display:block;font-size:.85rem;font-weight:600;color:var(--champagne);margin-bottom:.4rem}
+input,select,textarea{width:100%;padding:.9rem 1rem;background:rgba(36,9,16,.7);border:1px solid rgba(233,199,180,.3);border-radius:12px;color:var(--ivory);font:inherit}
+input:focus,select:focus,textarea:focus{border-color:var(--ember);outline:none;box-shadow:0 0 0 3px rgba(214,51,79,.3)}
+
+footer{padding:3rem 0 2rem;border-top:1px solid rgba(233,199,180,.15);color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem}
+footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
+
+/* One orchestrated entrance: hero only */
+@media(prefers-reduced-motion:no-preference){
+  .hero-inner>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+  .hero-inner>*:nth-child(2){animation-delay:.12s}.hero-inner>*:nth-child(3){animation-delay:.24s}.hero-inner>*:nth-child(4){animation-delay:.36s}
+  @keyframes rise{from{opacity:0;transform:translateY(24px)}}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
 </head>
-<body class="bg-gray-950 text-gray-100 font-sans antialiased selection:bg-brand-purple selection:text-white">
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-    <!-- Top Announcement Bar -->
-    <div class="bg-gradient-to-r from-purple-900 via-brand-purple to-violet-600 text-white text-xs sm:text-sm py-2.5 px-4 text-center font-medium">
-        <span>✨ Serving Female Content Creators across Ontario &amp; Regional Canada</span>
-        <a href="#offers" class="underline font-bold ml-2 hover:opacity-80">Get Your $37 CAD Vault Teardown or 14-Day Pilot &amp;rarr;</a>
+<header>
+  <div class="wrap nav">
+    <a class="logo metal" href="#top" aria-label="She Shoots She Sells home">She Shoots She Sells</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navList">Menu</button>
+    <ul id="navList">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#showcase">Showcase</a></li>
+      <li><a href="#offers">Pricing</a></li>
+      <li><a href="#founders">Founders</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn btn-primary" href="#booking">Book a consultation</a>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO: swap in your video files under /assets -->
+<section class="hero" id="top">
+  <div class="hero-media">
+    <video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="logo_branding_web_banner.jpg" aria-hidden="true" tabindex="-1">
+      <source src="assets/hero.webm" type="video/webm">
+      <source src="assets/hero.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="wrap hero-inner">
+    <span class="tag">Female-owned and led. Based in Ontario.</span>
+    <h1>She shoots.<br><span class="metal"><em>She sells.</em></span></h1>
+    <p>We manage top-tier creators with sharper pricing, a trained 24/7 chat team and safe social funnels, so you can focus on the content and own your brand.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#offers">Start with a $37 teardown</a>
+      <a class="btn btn-ghost" href="#pilot">See the 14-day pilot</a>
     </div>
-
-    <!-- Navigation Header -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-gray-950/80 border-b border-purple-950/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand Logo -->
-            <a href="#" class="flex items-center gap-2 text-xl font-extrabold tracking-tight">
-                <span class="bg-gradient-to-r from-brand-violet via-brand-purple to-purple-400 bg-clip-text text-transparent text-2xl">SheShootsSheSells</span>
-            </a>
-
-            <!-- Desktop Navigation -->
-            <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium text-gray-300">
-                <a href="#about" class="hover:text-brand-violet transition-colors">Why Choose Us</a>
-                <a href="#offers" class="hover:text-brand-violet transition-colors">Featured Offers</a>
-                <a href="#services" class="hover:text-brand-violet transition-colors">Services</a>
-                <a href="#pilot" class="hover:text-brand-violet transition-colors">14-Day Pilot</a>
-                <a href="#founders" class="hover:text-brand-violet transition-colors">Founders</a>
-                <a href="#results" class="hover:text-brand-violet transition-colors">Results</a>
-                <a href="#pricing" class="hover:text-brand-violet transition-colors">Pricing</a>
-                <a href="#faq" class="hover:text-brand-violet transition-colors">FAQ</a>
-            </nav>
-
-            <!-- CTA Button -->
-            <div class="hidden md:flex items-center space-x-4">
-                <a href="#booking" class="bg-brand-purple hover:bg-purple-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm transition-all shadow-lg shadow-brand-purple/25 hover:shadow-brand-purple/40">
-                    Book Consultation
-                </a>
-            </div>
-
-            <!-- Mobile Menu Toggle -->
-            <button id="mobile-menu-btn" class="lg:hidden text-gray-300 hover:text-white focus:outline-none">
-                <i data-lucide="menu" class="w-6 h-6"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-gray-900 border-b border-gray-800 px-4 pt-2 pb-6 space-y-3 text-sm">
-            <a href="#about" class="block py-2 text-gray-300 hover:text-brand-violet">Why Choose Us</a>
-            <a href="#offers" class="block py-2 text-gray-300 hover:text-brand-violet">Featured Offers</a>
-            <a href="#services" class="block py-2 text-gray-300 hover:text-brand-violet">Services</a>
-            <a href="#pilot" class="block py-2 text-gray-300 hover:text-brand-violet">14-Day Pilot</a>
-            <a href="#founders" class="block py-2 text-gray-300 hover:text-brand-violet">Founders</a>
-            <a href="#results" class="block py-2 text-gray-300 hover:text-brand-violet">Results</a>
-            <a href="#pricing" class="block py-2 text-gray-300 hover:text-brand-violet">Pricing</a>
-            <a href="#faq" class="block py-2 text-gray-300 hover:text-brand-violet">FAQ</a>
-            <a href="#booking" class="block w-full text-center bg-brand-purple text-white py-3 rounded-full font-semibold">Book Consultation</a>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-20">
-        <div class="absolute inset-0 z-0 opacity-30 pointer-events-none">
-            <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand-purple rounded-full filter blur-[128px]"></div>
-            <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-purple-900 rounded-full filter blur-[128px]"></div>
-        </div>
-
-        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
-            <span class="inline-flex items-center gap-2 bg-brand-purple/10 border border-brand-purple/30 text-brand-violet text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
-                <i data-lucide="shield-check" class="w-4 h-4"></i> 100% Female Founded &amp; Managed Agency • Ontario, ON
-            </span>
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-tight text-white mb-6">
-                Scale Your Fan Page. <br class="hidden sm:inline">
-                <span class="bg-gradient-to-r from-brand-violet via-purple-400 to-indigo-300 bg-clip-text text-transparent">Stop Leaking Revenue in Your DMs.</span>
-            </h1>
-            <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
-                Ontario’s premier female-led management agency co-founded by Shraddha &amp; Brooke. We help creators optimize pricing, deploy 24/7 trained chatting teams, and market on TikTok &amp; Reels without shadowbans.
-            </p>
-
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#offers" class="w-full sm:w-auto bg-brand-purple hover:bg-purple-600 text-white text-base font-bold px-8 py-4 rounded-full transition-all shadow-xl shadow-brand-purple/30 flex items-center justify-center gap-2">
-                    <i data-lucide="search" class="w-5 h-5"></i> Get 72-Hour $37 Teardown
-                </a>
-                <a href="#pilot" class="w-full sm:w-auto bg-gray-900 hover:bg-gray-800 text-gray-200 border border-purple-800/60 text-base font-semibold px-8 py-4 rounded-full transition-all flex items-center justify-center gap-2">
-                    Apply for 14-Day Pilot <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                </a>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-12 border-t border-purple-900/40 text-left">
-                <div>
-                    <h3 class="text-3xl font-extrabold text-white">100%</h3>
-                    <p class="text-sm text-gray-400 mt-1">Female-Led &amp; Safe</p>
-                </div>
-                <div>
-                    <h3 class="text-3xl font-extrabold text-white">24/7</h3>
-                    <p class="text-sm text-gray-400 mt-1">Trained DM Chatting</p>
-                </div>
-                <div>
-                    <h3 class="text-3xl font-extrabold text-white">3x+</h3>
-                    <p class="text-sm text-gray-400 mt-1">Average $/Sub Growth</p>
-                </div>
-                <div>
-                    <h3 class="text-3xl font-extrabold text-white">Safe SFW</h3>
-                    <p class="text-sm text-gray-400 mt-1">Reels &amp; TikTok Funnels</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Easy-Sell Assets &amp; Products Section -->
-    <section id="offers" class="py-24 bg-gray-900/60 border-y border-purple-950/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-violet font-semibold text-sm tracking-wider uppercase">Turnkey Growth Tools</span>
-                <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-2">Plug &amp; Play Creator Growth Assets</h2>
-                <p class="text-gray-400 mt-4 text-lg">Designed to stop immediate revenue leaks and scale your subscriber spend ($/sub) with zero friction.</p>
-            </div>
-
-            <div class="grid lg:grid-cols-3 gap-8">
-                <!-- Asset 1: The 72-Hour Teardown -->
-                <div class="bg-gray-950 border border-purple-900/40 rounded-3xl p-8 flex flex-col justify-between hover:border-brand-purple/60 transition-all relative">
-                    <div>
-                        <div class="flex justify-between items-start mb-6">
-                            <div class="p-3 bg-brand-purple/10 rounded-2xl text-brand-violet">
-                                <i data-lucide="file-search" class="w-8 h-8"></i>
-                            </div>
-                            <span class="bg-brand-purple/20 text-brand-violet text-xs font-bold px-3 py-1 rounded-full uppercase">$37 CAD Audit</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-3">The 72-Hour Vault &amp; Funnel Teardown</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                            A low-friction, high-impact diagnostic revealing exactly where money is slipping through your profile, tier pricing, and DM sales sequence.
-                        </p>
-
-                        <div class="space-y-3 pt-4 border-t border-purple-900/30 text-xs text-gray-300 mb-8">
-                            <div class="flex items-start gap-2">
-                                <i data-lucide="check-circle" class="w-4 h-4 text-brand-violet shrink-0 mt-0.5"></i>
-                                <span><strong>10-Minute Personal Loom Video:</strong> Bio, menu pricing, pinned posts &amp; DM teardown.</span>
-                            </div>
-                            <div class="flex items-start gap-2">
-                                <i data-lucide="check-circle" class="w-4 h-4 text-brand-violet shrink-0 mt-0.5"></i>
-                                <span><strong>Leakage Assessment Matrix:</strong> Custom scorecard across 5 key revenue drivers.</span>
-                            </div>
-                            <div class="flex items-start gap-2">
-                                <i data-lucide="check-circle" class="w-4 h-4 text-brand-violet shrink-0 mt-0.5"></i>
-                                <span><strong>1-Page Action Blueprint:</strong> 3 high-impact fixes you can make within 24 hours.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#booking" class="w-full text-center bg-gray-900 hover:bg-brand-purple border border-purple-800 text-white font-bold py-3.5 rounded-full transition-all">Claim Your $37 Teardown</a>
-                </div>
-
-                <!-- Asset 2: Batch &amp; Bank 30-Day Toolkit -->
-                <div class="bg-gray-950 border border-purple-900/40 rounded-3xl p-8 flex flex-col justify-between hover:border-brand-purple/60 transition-all relative">
-                    <div>
-                        <div class="flex justify-between items-start mb-6">
-                            <div class="p-3 bg-brand-purple/10 rounded-2xl text-brand-violet">
-                                <i data-lucide="folder-kanban" class="w-8 h-8"></i>
-                            </div>
-                            <span class="bg-brand-purple/20 text-brand-violet text-xs font-bold px-3 py-1 rounded-full uppercase">CREATOR Toolkit</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Batch &amp; Bank 30-Day Content Vault</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                            A plug-and-play digital toolkit solving content fatigue and caption block with pre-tested scripts and organized trackers.
-                        </p>
-
-                        <div class="space-y-3 pt-4 border-t border-purple-900/30 text-xs text-gray-300 mb-8">
-                            <div class="flex items-start gap-2">
-                                <i data-lucide="check-circle" class="w-4 h-4 text-brand-violet shrink-0 mt-0.5"></i>
-                                <span><strong>30 High-Conversion PPV Scripts:</strong> Curiosity, Interactive, Midnight &amp; Urgency frameworks.</span>
-                            </div>
-                            <div class="flex items-start gap-2">
-                                <i data-lucide="check-circle" class="w-4 h-4 text-brand-violet shrink-0 mt-0.5"></i>
-                                <span><strong>Notion Vault &amp; Scheduling System:</strong> Catalog assets by tier, outfit, and location.</span>
-                            </div>
-                            <div class="flex items-start gap-2">
-                                <i data-lucide="check-circle" class="w-4 h-4 text-brand-violet shrink-0 mt-0.5"></i>
-                                <span><strong>50 Open-Loop Teaser Hooks:</strong> Double your mass-DM unlock rates instantly.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#booking" class="w-full text-center bg-gray-900 hover:bg-brand-purple border border-purple-800 text-white font-bold py-3.5 rounded-full transition-all">Get Digital Toolkit</a>
-                </div>
-
-                <!-- Asset 3: 14-Day DM Conversion Pilot -->
-                <div class="bg-gradient-to-b from-gray-900 via-gray-950 to-brand-card border-2 border-brand-purple rounded-3xl p-8 flex flex-col justify-between relative shadow-2xl shadow-purple-950/50">
-                    <span class="absolute -top-3 right-6 bg-brand-purple text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-full">Most Popular Trial</span>
-                    <div>
-                        <div class="flex justify-between items-start mb-6">
-                            <div class="p-3 bg-brand-purple/20 rounded-2xl text-brand-violet">
-                                <i data-lucide="rocket" class="w-8 h-8"></i>
-                            </div>
-                            <span class="bg-brand-purple text-white text-xs font-bold px-3 py-1 rounded-full uppercase">14-Day Pilot</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-3">14-Day DM Conversion &amp; Revenue Pilot</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                            Hand us your DMs for 14 days. We deploy 24/7 female-led chatting frameworks to double your DM earnings while you focus strictly on content.
-                        </p>
-
-                        <div class="space-y-3 pt-4 border-t border-purple-900/40 text-xs text-gray-300 mb-8">
-                            <div class="flex items-start gap-2">
-                                <i data-lucide="check-circle" class="w-4 h-4 text-brand-violet shrink-0 mt-0.5"></i>
-                                <span><strong>24/7 Female-Led DM Coverage:</strong> Shifts A, B, and C covering peak global hours.</span>
-                            </div>
-                            <div class="flex items-start gap-2">
-                                <i data-lucide="check-circle" class="w-4 h-4 text-brand-violet shrink-0 mt-0.5"></i>
-                                <span><strong>Account Persona &amp; Tone Matching:</strong> Voice alignment call to preserve 100% authenticity.</span>
-                            </div>
-                            <div class="flex items-start gap-2">
-                                <i data-lucide="check-circle" class="w-4 h-4 text-brand-violet shrink-0 mt-0.5"></i>
-                                <span><strong>Performance Split Guarantee:</strong> $199 CAD setup fee or 30% split on revenue above baseline.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#booking" class="w-full text-center bg-brand-purple hover:bg-purple-600 text-white font-bold py-3.5 rounded-full transition-all shadow-lg shadow-brand-purple/30">Apply for 14-Day Pilot</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-   <!-- Founders & Partnership Section -->
-<section id="founders" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-brand-violet font-semibold text-sm tracking-wider uppercase">Meet The Partnership</span>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-2">Dedicated To Your Success & Financial Freedom</h2>
-        <p class="text-gray-400 mt-4 text-lg">Female-led agency leadership combining growth strategy, software engineering, and 7+ years of firsthand creator experience.</p>
-    </div>
-
-    <div class="space-y-10">
-        <!-- Founder 1: Shraddha -->
-        <div class="grid md:grid-cols-2 gap-8 items-center bg-brand-card/60 border border-purple-900/40 rounded-3xl p-8 sm:p-12">
-            <div class="aspect-[3/4] max-w-md mx-auto w-full rounded-2xl overflow-hidden border border-purple-900/50 shadow-xl">
-                <img src="shraddha.PNG" alt="Shraddha - Co-Founder & Agency Principal" class="w-full h-full object-cover">
-            </div>
-            <div>
-                <span class="bg-brand-purple/20 text-brand-violet text-xs font-bold px-3 py-1 rounded-full uppercase">Co-Founder & Growth Principal</span>
-                <h3 class="text-3xl font-bold text-white mt-4 mb-2">Shraddha</h3>
-                <p class="text-sm text-brand-violet font-medium mb-6">Niagara Falls, Ontario</p>
-                <p class="text-gray-300 text-sm leading-relaxed mb-6">
-                    "Our mission is to give female creators the exact blueprint, security, and strategic support they need to transform their social reach into a sustainable, highly lucrative business."
-                </p>
-                <div class="space-y-3 border-t border-purple-900/40 pt-6 text-xs text-gray-300">
-                    <div class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-brand-violet"></i> sshraddha.ssingh@gmail.com</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Founder 2: Brooke -->
-        <div class="grid md:grid-cols-2 gap-8 items-center bg-brand-card/60 border border-purple-900/40 rounded-3xl p-8 sm:p-12">
-            <div class="aspect-[3/4] max-w-md mx-auto w-full rounded-2xl overflow-hidden border border-purple-900/50 shadow-xl">
-                <!-- Replace with brooke.PNG when uploaded to repo -->
-                <img src="brooke.png" alt="Brooke - Co-Founder & Technical Operations Principal" class="w-full h-full object-cover">
-            </div>
-            <div>
-                <span class="bg-brand-purple/20 text-brand-violet text-xs font-bold px-3 py-1 rounded-full uppercase">Co-Founder & Technical Operations Principal</span>
-                <h3 class="text-3xl font-bold text-white mt-4 mb-2">Brooke</h3>
-                <p class="text-sm text-brand-violet font-medium mb-6">Niagara Falls, Ontario</p>
-                <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                    "Having walked in your shoes for over seven years as a creator on Fansly and OnlyFans, I co-founded She Shoots She Sells to give women the technical systems, bulletproof privacy, and operational freedom needed to build real wealth."
-                </p>
-                <p class="text-gray-400 text-xs leading-relaxed mb-6">
-                    An engineering graduate turned web development agency owner, Brooke merges deep technical programming and platform security with over 7 years of personal creator experience. She is fiercely passionate about empowering women to take 100% ownership of their brand, stay safe online, and achieve complete financial independence.
-                </p>
-                <div class="space-y-3 border-t border-purple-900/40 pt-6 text-xs text-gray-300">
-                    <div class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-brand-violet"></i> customexclusivesocials@gmail.com</div>
-                </div>
-            </div>
-        </div>
-    </div>
+  </div>
 </section>
 
-    
-    <!-- 14-Day Pilot Deep Dive Section (#pilot) -->
-    <section id="pilot" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-gradient-to-r from-gray-900 via-brand-card to-gray-950 border border-purple-900/50 rounded-3xl p-8 sm:p-12 shadow-2xl relative">
-            <div class="grid lg:grid-cols-2 gap-10 items-center">
-                <div>
-                    <span class="bg-brand-purple/20 text-brand-violet text-xs font-bold px-3 py-1 rounded-full uppercase">14-Day Revenue Pilot</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4 mb-4">Test Our 24/7 Chatting Team Risk-Free</h2>
-                    <p class="text-gray-300 text-sm leading-relaxed mb-6">
-                        Hesitant to sign a long-term contract? We get it. That's why we created our 14-Day DM Conversion &amp; Revenue Pilot. Hand us your inbox for two weeks and watch your net earnings surge without lifting a finger.
-                    </p>
-                    <div class="space-y-3 text-xs text-gray-300 mb-8">
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="shield-check" class="w-4 h-4 text-brand-violet"></i>
-                            <span><strong>Zero Risk Option:</strong> Pay $199 setup or a 50/50 split strictly on earnings *above* your 14-day baseline.</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="user-check" class="w-4 h-4 text-brand-violet"></i>
-                            <span><strong>Female Chatters Only:</strong> Strict voice-matching protocol matching your exact tone, emojis, and pet names.</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="line-chart" class="w-4 h-4 text-brand-violet"></i>
-                            <span><strong>Live Data Dashboard:</strong> Track unlock rates, mass DM earnings, and tip totals in real-time.</span>
-                        </div>
-                    </div>
-                    <a href="#booking" class="bg-brand-purple hover:bg-purple-600 text-white font-bold px-8 py-3.5 rounded-full inline-flex items-center gap-2 shadow-lg shadow-brand-purple/30 text-sm">
-                        Apply For Pilot Trial <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                </div>
-                <div class="bg-gray-950 border border-purple-900/40 p-6 rounded-2xl">
-                    <h4 class="font-bold text-white text-base mb-4 flex items-center gap-2">
-                        <i data-lucide="clock" class="w-5 h-5 text-brand-violet"></i> 24/7 Coverage Shift Matrix
-                    </h4>
-                    <div class="space-y-3 text-xs">
-                        <div class="p-3 bg-gray-900/80 rounded-xl border border-purple-950">
-                            <p class="font-semibold text-brand-violet">Shift A (08:00 – 16:00 EST)</p>
-                            <p class="text-gray-400 mt-0.5">Mass DM sequence drops, welcome messages, and subscriber retention check-ins.</p>
-                        </div>
-                        <div class="p-3 bg-gray-900/80 rounded-xl border border-purple-950">
-                            <p class="font-semibold text-brand-violet">Shift B (16:00 – 00:00 EST)</p>
-                            <p class="text-gray-400 mt-0.5">Peak volume chatting, interactive storyline PPVs, and high-ticket custom negotiations.</p>
-                        </div>
-                        <div class="p-3 bg-gray-900/80 rounded-xl border border-purple-950">
-                            <p class="font-semibold text-brand-violet">Shift C (00:00 – 08:00 EST)</p>
-                            <p class="text-gray-400 mt-0.5">Late-night ASMR drops, international fan conversions, and high-ticket whale sales.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="strip">
+  <ul class="wrap">
+    <li>Female-led<small>Owners, strategists and chatters</small></li>
+    <li>24/7 DM coverage<small>Three shifts, your exact voice</small></li>
+    <li>Privacy first<small>Encrypted vaults, Canadian IPs</small></li>
+    <li>Performance-based<small>We earn when you earn</small></li>
+  </ul>
+</div>
 
-
-
-    <!-- Services Section -->
-    <section id="services" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-brand-violet font-semibold text-sm tracking-wider uppercase">Our Management Services</span>
-            <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-2">Everything You Need to Scale Your Earnings</h2>
-            <p class="text-gray-400 mt-4 text-lg">Designed specifically for female creators aged 19–35 looking to build a high-converting digital presence.</p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Service 1 -->
-            <div class="bg-gray-900/80 border border-purple-950 rounded-3xl p-8 hover:border-brand-purple/50 transition-all group flex flex-col justify-between">
-                <div>
-                    <div class="w-14 h-14 bg-brand-purple/10 rounded-2xl flex items-center justify-center text-brand-violet mb-6 group-hover:scale-110 transition-transform">
-                        <i data-lucide="trending-up" class="w-7 h-7"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Personalized OnlyFans Growth Plan</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        Custom tailored strategies designed to boost your monthly subscriber retention, optimize pricing tiers, and maximize PPV revenue.
-                    </p>
-                </div>
-                <ul class="text-xs text-gray-300 space-y-2 pt-4 border-t border-purple-900/30">
-                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brand-violet"></i> Pricing &amp; Vault Optimization</li>
-                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brand-violet"></i> Subscriber Retention Tactics</li>
-                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brand-violet"></i> Daily Upsell Strategies</li>
-                </ul>
-            </div>
-
-            <!-- Service 2 -->
-            <div class="bg-gray-900/80 border border-brand-purple/40 rounded-3xl p-8 relative hover:border-brand-purple transition-all group flex flex-col justify-between shadow-lg shadow-purple-950/40">
-                <span class="absolute -top-3 right-6 bg-brand-purple text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-full">Most Popular</span>
-                <div>
-                    <div class="w-14 h-14 bg-brand-purple/10 rounded-2xl flex items-center justify-center text-brand-violet mb-6 group-hover:scale-110 transition-transform">
-                        <i data-lucide="users" class="w-7 h-7"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Social Media to OF Subscriber Funnel</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        Turn casual social media followers into paying fans. We manage your promotional channels on Instagram, TikTok, and X safely without shadowbans.
-                    </p>
-                </div>
-                <ul class="text-xs text-gray-300 space-y-2 pt-4 border-t border-purple-900/30">
-                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brand-violet"></i> Insulated Multi-Link Bridge Funnels</li>
-                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brand-violet"></i> Safe Teaser Content Strategy</li>
-                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brand-violet"></i> SEO Keyword Stacking &amp; Hashtag Vaults</li>
-                </ul>
-            </div>
-
-            <!-- Service 3 -->
-            <div class="bg-gray-900/80 border border-purple-950 rounded-3xl p-8 hover:border-brand-purple/50 transition-all group flex flex-col justify-between">
-                <div>
-                    <div class="w-14 h-14 bg-brand-purple/10 rounded-2xl flex items-center justify-center text-brand-violet mb-6 group-hover:scale-110 transition-transform">
-                        <i data-lucide="video" class="w-7 h-7"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">24/7 DM Chatting &amp; Vault Management</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        Never worry about unread DMs again. Our trained female chatting team handles your inbox 24/7, upselling PPVs and custom requests in your exact tone.
-                    </p>
-                </div>
-                <ul class="text-xs text-gray-300 space-y-2 pt-4 border-t border-purple-900/30">
-                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brand-violet"></i> 24/7 Shift Rotations (A, B &amp; C)</li>
-                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brand-violet"></i> Open-Loop Curiosity Scripting</li>
-                    <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brand-violet"></i> 100% Account Tone &amp; Persona Matching</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Creator Results &amp; Testimonials -->
-    <section id="results" class="py-20 bg-gray-900/40 border-y border-purple-950/40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-violet font-semibold text-sm tracking-wider uppercase">Creator Growth</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">What Our Creators Say</h2>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gray-950 p-8 rounded-3xl border border-purple-900/30">
-                    <div class="flex text-amber-400 mb-4"><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i></div>
-                    <p class="text-gray-300 text-sm italic mb-6">"Working with Shraddha &amp; Brooke completely changed my perspective. Having two female managers made me feel so comfortable sharing my vision."</p>
-                    <div class="font-bold text-white text-sm">Creator Partner</div>
-                    <div class="text-xs text-brand-violet">Ontario, Canada</div>
-                </div>
-
-                <div class="bg-gray-950 p-8 rounded-3xl border border-purple-900/30">
-                    <div class="flex text-amber-400 mb-4"><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i></div>
-                    <p class="text-gray-300 text-sm italic mb-6">"Their 14-day trial doubled my DM unlock revenue in two weeks! Handing over messaging to their female team was the best decision I've made."</p>
-                    <div class="font-bold text-white text-sm">Featured Creator</div>
-                    <div class="text-xs text-brand-violet">Niagara Region</div>
-                </div>
-
-                <div class="bg-gray-950 p-8 rounded-3xl border border-purple-900/30">
-                    <div class="flex text-amber-400 mb-4"><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i></div>
-                    <p class="text-gray-300 text-sm italic mb-6">"I had no idea how to convert Instagram Reels over to OF without getting shadowbanned. She Shoots She Sells gave me the exact bridge funnel blueprint."</p>
-                    <div class="font-bold text-white text-sm">Verified Creator</div>
-                    <div class="text-xs text-brand-violet">Toronto / Regional ON</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-brand-violet font-semibold text-sm tracking-wider uppercase">Transparent Tiers</span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Management Options Tailored To You</h2>
-            <p class="text-gray-400 mt-2">Choose between a single diagnostic audit, a 14-day trial pilot, or full 360° account representation.</p>
-        </div>
-
-        <div class="grid md:grid-cols-3 max-w-6xl mx-auto gap-8">
-            <!-- Tier 1: $37 Teardown -->
-            <div class="bg-gray-900 border border-purple-950 rounded-3xl p-8 flex flex-col justify-between">
-                <div>
-                    <h3 class="text-xl font-bold text-white">72-Hour Teardown</h3>
-                    <p class="text-gray-400 text-sm mt-1">Diagnostic audit to locate immediate revenue leaks.</p>
-                    <div class="my-6">
-                        <span class="text-3xl font-extrabold text-white">$37</span>
-                        <span class="text-xs text-gray-400 block mt-1">Free for qualified $3k+/mo creators</span>
-                    </div>
-                    <ul class="space-y-3 text-sm text-gray-300 mb-8">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-violet"></i> 10-Min Loom Walkthrough</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-violet"></i> 5-Driver Assessment Scorecard</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-violet"></i> 1-Page 24-Hour Blueprint</li>
-                    </ul>
-                </div>
-                <a href="#booking" class="w-full text-center bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 rounded-full transition-colors">Book $37 Audit</a>
-            </div>
-
-            <!-- Tier 2: 14-Day Pilot -->
-            <div class="bg-gray-900 border border-brand-purple/60 rounded-3xl p-8 flex flex-col justify-between relative shadow-lg shadow-purple-950/40">
-                <span class="absolute -top-3 right-6 bg-brand-purple text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-full">Trial Run</span>
-                <div>
-                    <h3 class="text-xl font-bold text-white">14-Day DM Pilot</h3>
-                    <p class="text-gray-400 text-sm mt-1">Test our 24/7 chatting team live on your account.</p>
-                    <div class="my-6">
-                        <span class="text-3xl font-extrabold text-white">$190 / Performance</span>
-                        <span class="text-xs text-gray-400 block mt-1">Or 30/70 split on net gains over baseline</span>
-                    </div>
-                    <ul class="space-y-3 text-sm text-gray-300 mb-8">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-violet"></i> 24/7 Female Chatting Coverage</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-violet"></i> Custom Voice &amp; Tone Matching</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-violet"></i> Daily Live Revenue Tracking</li>
-                    </ul>
-                </div>
-                <a href="#booking" class="w-full text-center bg-brand-purple hover:bg-purple-600 text-white font-bold py-3 rounded-full transition-colors shadow-lg shadow-brand-purple/30">Apply for 14-Day Pilot</a>
-            </div>
-
-            <!-- Tier 3: VIP Full Management -->
-            <div class="bg-gradient-to-b from-gray-900 to-brand-dark border-2 border-brand-purple rounded-3xl p-8 flex flex-col justify-between relative shadow-xl shadow-purple-950/40">
-                <span class="absolute -top-3 right-6 bg-brand-purple text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-full">Full Management</span>
-                <div>
-                    <h3 class="text-xl font-bold text-white">VIP Full 360° Representation</h3>
-                    <p class="text-gray-400 text-sm mt-1">Complete hands-off management for serious creators.</p>
-                    <div class="my-6">
-                        <span class="text-3xl font-extrabold text-white">20% – 30% Share</span>
-                        <span class="text-xs text-gray-400 block mt-1">We win strictly when you win</span>
-                    </div>
-                    <ul class="space-y-3 text-sm text-gray-300 mb-8">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-violet"></i> Everything in Pilot &amp; Teardown</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-violet"></i> Full 24/7 DM Chatting &amp; Vault Team</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-violet"></i> TikTok, Reels &amp; X Traffic Marketing</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-violet"></i> Dedicated Founders Communication Channel</li>
-                    </ul>
-                </div>
-                <a href="#booking" class="w-full text-center bg-brand-purple hover:bg-purple-600 text-white font-bold py-3 rounded-full transition-colors shadow-lg shadow-brand-purple/30">Apply for VIP Management</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="py-20 bg-gray-900/40 border-t border-purple-950/40">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <span class="text-brand-violet font-semibold text-sm tracking-wider uppercase">Got Questions?</span>
-                <h2 class="text-3xl font-extrabold text-white mt-2">Frequently Asked Questions</h2>
-            </div>
-
-            <div class="space-y-4">
-                <div class="border border-purple-900/30 rounded-2xl bg-gray-950 overflow-hidden">
-                    <button class="faq-btn w-full px-6 py-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none">
-                        <span>How do you promote my account on social media without getting shadowbanned?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-brand-violet transition-transform"></i>
-                    </button>
-                    <div class="faq-content hidden px-6 pb-4 text-gray-400 text-sm leading-relaxed">
-                        We deploy an insulated Buffer &amp; Funnel strategy. We never post adult links directly on TikTok or Instagram. Instead, we anchor your profiles in high-volume SFW niches (Fashion, Fitness, Cosplay) and route traffic through neutral bridge pages using compliant euphemisms.
-                    </div>
-                </div>
-
-                <div class="border border-purple-900/30 rounded-2xl bg-gray-950 overflow-hidden">
-                    <button class="faq-btn w-full px-6 py-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none">
-                        <span>How does the 14-Day Revenue Pilot work?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-brand-violet transition-transform"></i>
-                    </button>
-                    <div class="faq-content hidden px-6 pb-4 text-gray-400 text-sm leading-relaxed">
-                        Our all-female chatting team takes over your direct messages for 14 days under secure, dedicated proxy IPs. We match your exact personality and tone while using open-loop PPV scripting to boost sales. You track earnings live on our performance dashboard.
-                    </div>
-                </div>
-
-                <div class="border border-purple-900/30 rounded-2xl bg-gray-950 overflow-hidden">
-                    <button class="faq-btn w-full px-6 py-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none">
-                        <span>Who responds to my subscribers in the DMs?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-brand-violet transition-transform"></i>
-                    </button>
-                    <div class="faq-content hidden px-6 pb-4 text-gray-400 text-sm leading-relaxed">
-                        All direct messaging is handled exclusively by trained female chatter specialists in Ontario. Before going live, we complete a 30-minute Voice &amp; Persona Alignment Session to capture your exact vocabulary, emojis, and boundary rules.
-                    </div>
-                </div>
-
-                <div class="border border-purple-900/30 rounded-2xl bg-gray-950 overflow-hidden">
-                    <button class="faq-btn w-full px-6 py-4 text-left font-semibold text-white flex justify-between items-center focus:outline-none">
-                        <span>How do we ensure my personal identity and location remain private?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-brand-violet transition-transform"></i>
-                    </button>
-                    <div class="faq-content hidden px-6 pb-4 text-gray-400 text-sm leading-relaxed">
-                        Privacy is our top priority. We store credentials strictly inside encrypted password vaults (1Password), access accounts using static Canadian residential proxy IPs, and enforce geo-blocking rules to protect your local identity.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Appointment Booking Section -->
-    <section id="booking" class="py-24 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-gradient-to-br from-gray-900 via-gray-900 to-brand-dark border border-purple-900/40 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
-            <div class="text-center max-w-2xl mx-auto mb-10">
-                <span class="text-brand-violet font-semibold text-sm tracking-wider uppercase">Take The Next Step</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Book Your Strategy Consultation</h2>
-                <p class="text-gray-400 text-sm mt-2">Select your preferred offer or schedule a discovery call directly with Shraddha &amp; Brooke.</p>
-            </div>
-
-  <form action="https://api.web3forms.com/submit" method="POST" class="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
-    <!-- Web3Forms Routing Config -->
-    <input type="hidden" name="access_key" value="348ab450-b6e1-4158-a1b6-42dd71a849d0">
-    <input type="hidden" name="subject" value="New Website Inquiry - She Shoots She Sells">
-    <input type="hidden" name="from_name" value="She Shoots She Sells Agency">
-
+<section id="about">
+  <div class="wrap split">
     <div>
-        <label class="block text-xs font-semibold text-gray-300 uppercase mb-2">Your Name *</label>
-        <input type="text" name="name" required placeholder="Full Name" class="w-full bg-gray-950 border border-purple-900/40 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-violet">
+      <h2>Built by women who know the work from the inside.</h2>
+      <p class="lead">She Shoots She Sells is a female-owned and led agency for creators who want real systems, real privacy and real ownership of their business.</p>
+      <p>No guesswork and no leaving money in your inbox. We audit your funnel, fix pricing, staff your DMs and grow your reach on social platforms without risking your accounts.</p>
+      <a class="btn btn-ghost" href="#founders">Meet the founders</a>
     </div>
+    <div class="frame"><img src="logo_branding_web_banner.jpg" alt="She Shoots She Sells logo on a burgundy wall in a luxury lounge" width="1920" height="1080" loading="lazy" decoding="async"></div>
+  </div>
+</section>
 
+<section class="services" id="services">
+  <div class="wrap">
+    <h2>Everything you need to scale your earnings.</h2>
+    <p class="lead">Three services, built for female creators who are ready to treat their page like a business.</p>
+    <div class="svc">
+      <article>
+        <h3>Personalized growth plan</h3>
+        <p>A custom strategy to lift retention, tune your pricing tiers and grow pay-per-view revenue.</p>
+        <ul><li>Pricing and vault optimization</li><li>Subscriber retention</li><li>Daily upsell strategy</li></ul>
+      </article>
+      <article>
+        <h3>Social to subscriber funnel</h3>
+        <p>We run Instagram, TikTok and X promotion that turns followers into paying fans while keeping accounts safe.</p>
+        <ul><li>Insulated bridge-link funnels</li><li>Safe teaser strategy</li><li>SEO and hashtag systems</li></ul>
+      </article>
+      <article>
+        <h3>24/7 DM chatting</h3>
+        <p>A trained female chat team answers your inbox around the clock in your tone, selling PPVs and customs.</p>
+        <ul><li>Three rotating shifts</li><li>Open-loop scripting</li><li>Voice and persona matching</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO SHOWCASE: replace src/poster with your assets. preload="none" keeps the page fast. -->
+<section id="showcase">
+  <div class="wrap">
+    <h2>See the standard we hold.</h2>
+    <p class="lead">Brand films and safe-for-work campaign clips from our creator roster. Tap to play.</p>
+    <div class="reels">
+      <div class="reel"><video preload="none" playsinline poster="assets/reel-1.jpg" aria-label="Brand showcase video 1"><source src="assets/reel-1.mp4" type="video/mp4"></video><button type="button"><span aria-hidden="true">&#9654;</span>Play brand film</button></div>
+      <div class="reel"><video preload="none" playsinline poster="assets/reel-2.jpg" aria-label="Campaign showcase video 2"><source src="assets/reel-2.mp4" type="video/mp4"></video><button type="button"><span aria-hidden="true">&#9654;</span>Play campaign clip</button></div>
+      <div class="reel"><video preload="none" playsinline poster="assets/reel-3.jpg" aria-label="Campaign showcase video 3"><source src="assets/reel-3.mp4" type="video/mp4"></video><button type="button"><span aria-hidden="true">&#9654;</span>Play creator story</button></div>
+    </div>
+  </div>
+</section>
+
+<section id="offers" style="background:var(--wine)">
+  <div class="wrap">
+    <h2>Start small. Scale when it works.</h2>
+    <p class="lead">Pick a single audit, a toolkit, a two-week trial or full management.</p>
+    <div class="tiers">
+      <div class="tier">
+        <h3>72-hour teardown</h3>
+        <div class="price">$37 CAD<small>Free for qualified $3k+/mo creators</small></div>
+        <ul><li>10-minute personal video review</li><li>Scorecard across 5 revenue drivers</li><li>1-page plan with 3 fixes for the next 24 hours</li></ul>
+        <a class="btn btn-ghost" href="#booking" data-offer="teardown">Book the teardown</a>
+      </div>
+      <div class="tier">
+        <h3>30-day content vault</h3>
+        <div class="price">$29 CAD<small>Digital toolkit</small></div>
+        <ul><li>30 PPV scripts</li><li>Notion vault and scheduler</li><li>50 open-loop teaser hooks</li></ul>
+        <a class="btn btn-ghost" href="#booking" data-offer="toolkit">Get the toolkit</a>
+      </div>
+      <div class="tier feat">
+        <h3>14-day DM pilot</h3>
+        <div class="price">$190 CAD<small>Or 30% of earnings above your baseline</small></div>
+        <ul><li>24/7 female chat coverage</li><li>Voice and tone matching</li><li>Live revenue dashboard</li></ul>
+        <a class="btn btn-primary" href="#booking" data-offer="pilot">Apply for the pilot</a>
+      </div>
+      <div class="tier">
+        <h3>Full 360 management</h3>
+        <div class="price">20 to 30% share<small>We win when you win</small></div>
+        <ul><li>Everything in the pilot and teardown</li><li>Full chat and vault team</li><li>TikTok, Reels and X marketing</li><li>Direct line to the founders</li></ul>
+        <a class="btn btn-ghost" href="#booking" data-offer="full">Apply for management</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pilot" id="pilot">
+  <div class="wrap split">
     <div>
-        <label class="block text-xs font-semibold text-gray-300 uppercase mb-2">Email Address *</label>
-        <input type="email" name="email" required placeholder="you@example.com" class="w-full bg-gray-950 border border-purple-900/40 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-violet">
+      <h2>Test our chat team for 14 days.</h2>
+      <p class="lead">Hand us your inbox for two weeks. We match your voice, you watch the numbers, and you decide after.</p>
+      <p>Chatting is done by trained women in Ontario after a 30-minute voice and persona session. You track unlock rates, mass DM earnings and tips on a live dashboard.</p>
+      <a class="btn btn-primary" href="#booking" data-offer="pilot">Apply for the pilot</a>
     </div>
-
     <div>
-        <label class="block text-xs font-semibold text-gray-300 uppercase mb-2">Phone / SMS Number *</label>
-        <input type="tel" name="phone" required placeholder="(778) 898-1401" class="w-full bg-gray-950 border border-purple-900/40 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-violet">
+      <div class="shift"><b>Shift A, 8:00 to 16:00 ET</b><span>Mass DM drops, welcome messages and retention check-ins.</span></div>
+      <div class="shift"><b>Shift B, 16:00 to 24:00 ET</b><span>Peak-volume chatting, storyline PPVs and custom negotiations.</span></div>
+      <div class="shift"><b>Shift C, 0:00 to 8:00 ET</b><span>Late-night drops, international fans and high-ticket sales.</span></div>
     </div>
+  </div>
+</section>
 
+<section id="founders">
+  <div class="wrap">
+    <h2>Two founders. One standard.</h2>
+    <div class="people">
+      <article class="person">
+        <div class="frame"><img src="shraddha.PNG" alt="Shraddha, co-founder and growth principal" width="600" height="800" loading="lazy" decoding="async"></div>
+        <p class="role">Co-founder and Growth Principal</p>
+        <h3>Shraddha</h3>
+        <blockquote>Our mission is to give female creators the blueprint, security and support to turn their reach into a sustainable business.</blockquote>
+        <a href="mailto:sshraddha.ssingh@gmail.com">sshraddha.ssingh@gmail.com</a>
+      </article>
+      <article class="person">
+        <div class="frame"><img src="brooke.png" alt="Brooke, co-founder and technical operations principal" width="600" height="800" loading="lazy" decoding="async"></div>
+        <p class="role">Co-founder and Technical Operations Principal</p>
+        <h3>Brooke</h3>
+        <blockquote>I co-founded She Shoots She Sells to give women the technical systems, privacy and freedom to build real wealth.</blockquote>
+        <p>An engineering graduate turned web agency owner, Brooke pairs programming and platform security with seven years of creator experience.</p>
+        <a href="mailto:customexclusivesocials@gmail.com">customexclusivesocials@gmail.com</a>
+      </article>
+    </div>
+    <!-- Add real, permissioned testimonials here once you have them. -->
+  </div>
+</section>
+
+<section id="faq" style="background:var(--wine)">
+  <div class="wrap" style="max-width:860px">
+    <h2>Questions, answered.</h2>
+    <details><summary>How do you promote my account without shadowbans?</summary><p>We never post adult links directly on TikTok or Instagram. Profiles sit in SFW niches like fashion, fitness and cosplay, and traffic moves through neutral bridge pages using compliant wording.</p></details>
+    <details><summary>How does the 14-day pilot work?</summary><p>Our female chat team takes over your DMs for 14 days using dedicated, secure access. We match your tone and use open-loop PPV scripting, and you track earnings live.</p></details>
+    <details><summary>Who answers my subscribers?</summary><p>Only trained female chatters based in Ontario. Before going live we hold a 30-minute session to capture your vocabulary, emojis and boundaries.</p></details>
+    <details><summary>How is my identity and location kept private?</summary><p>Credentials live in an encrypted password vault, accounts are accessed through static Canadian residential IPs, and geo-blocking protects your local identity.</p></details>
+  </div>
+</section>
+
+<section class="book" id="booking">
+  <div class="wrap" style="text-align:center">
+    <h2>Book your strategy consultation.</h2>
+    <p class="lead" style="margin-inline:auto">Choose an offer and tell us about your goals. Shraddha and Brooke reply within 24 hours.</p>
+    <form action="https://api.web3forms.com/submit" method="POST" style="text-align:left">
+      <input type="hidden" name="access_key" value="348ab450-b6e1-4158-a1b6-42dd71a849d0">
+      <input type="hidden" name="subject" value="New Website Inquiry - She Shoots She Sells">
+      <input type="hidden" name="from_name" value="She Shoots She Sells Agency">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <div><label for="name">Your name</label><input id="name" name="name" required autocomplete="name"></div>
+      <div><label for="email">Email address</label><input id="email" type="email" name="email" required autocomplete="email"></div>
+      <div><label for="phone">Phone or SMS number</label><input id="phone" type="tel" name="phone" required autocomplete="tel"></div>
+      <div><label for="offer">Offer</label>
+        <select id="offer" name="interested_offer" required>
+          <option value="72-Hour Vault & Funnel Teardown ($37 CAD)" data-k="teardown">72-Hour Teardown ($37 CAD)</option>
+          <option value="Batch & Bank 30-Day Content Vault ($29 CAD)" data-k="toolkit">30-Day Content Vault ($29 CAD)</option>
+          <option value="14-Day DM Conversion & Revenue Pilot ($190 CAD)" data-k="pilot">14-Day DM Pilot ($190 CAD)</option>
+          <option value="Full 360 Creator Management" data-k="full">Full 360 Management</option>
+        </select></div>
+      <div class="full"><label for="message">Your goals and handles</label><textarea id="message" name="message" rows="4" required placeholder="Your social channels, estimated monthly revenue in CAD, and any questions"></textarea></div>
+      <div class="full"><button class="btn btn-primary" type="submit" style="width:100%">Send consultation request</button></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
     <div>
-        <label class="block text-xs font-semibold text-gray-300 uppercase mb-2">Interested Offer *</label>
-        <select name="interested_offer" required class="w-full bg-gray-950 border border-purple-900/40 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-violet">
-            <option value="The 72-Hour Vault & Funnel Teardown ($67 CAD)">The 72-Hour Vault & Funnel Teardown ($37 CAD)</option>
-            <option value="Batch & Bank 30-Day Script Vault ($39 CAD)">Batch & Bank 30-Day Script Vault ($29 CAD)</option>
-            <option value="14-Day DM Conversion & Revenue Pilot ($275 CAD)">14-Day DM Conversion & Revenue Pilot ($190 CAD)</option>
-            <option value="Full 360° Creator Management">Full 360° Creator Monthly FULL Management</option>
-        </select>
+      <strong class="metal" style="font:600 1.4rem var(--serif)">She Shoots She Sells</strong>
+      <p>Female-owned and led creator management.<br>7171 Lionshead Avenue, Niagara Falls, ON</p>
     </div>
-
-    <div class="sm:col-span-2">
-        <label class="block text-xs font-semibold text-gray-300 uppercase mb-2">Tell Us About Your Goals & Handles</label>
-        <textarea name="message" rows="4" placeholder="Mention your current social channels, estimated monthly revenue in CAD, or questions..." class="w-full bg-gray-950 border border-purple-900/40 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-violet" required></textarea>
+    <div>
+      <p><a href="mailto:sshraddha.ssingh@gmail.com">sshraddha.ssingh@gmail.com</a><br><a href="tel:+17788981401">(778) 898-1401</a></p>
     </div>
+    <p>&copy; 2026 She Shoots She Sells. All rights reserved.</p>
+  </div>
+</footer>
 
-    <div class="sm:col-span-2">
-        <button type="submit" class="w-full bg-brand-purple hover:bg-purple-600 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-brand-purple/30 flex items-center justify-center gap-2">
-            <i data-lucide="check-circle" class="w-5 h-5"></i> Submit Consultation Request
-        </button>
-    </div>
-</form>
-            <div id="booking-success" class="hidden text-center py-8 text-brand-violet font-semibold">
-                Thank you! Your request has been sent to Shraddha &amp; Brooke. We will get back to you within 24 hours.
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer &amp; Contact Details -->
-    <footer id="contact" class="bg-gray-950 border-t border-purple-950/50 text-gray-400 text-sm py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-10">
-            <div class="md:col-span-2">
-                <span class="bg-gradient-to-r from-brand-violet to-purple-400 bg-clip-text text-transparent font-extrabold text-2xl">SheShootsSheSells</span>
-                <p class="text-gray-400 text-sm mt-4 max-w-md leading-relaxed">
-                    Female-led creator management agency empowering women to monetize their digital presence safely, privately, and profitably across Ontario and Canada.
-                </p>
-                <div class="mt-6 flex items-center gap-4 text-xs text-gray-400">
-                    <div class="flex items-center gap-1"><i data-lucide="map-pin" class="w-4 h-4 text-brand-violet"></i> 7171 Lionshead Avenue, Niagara Falls, ON</div>
-                </div>
-            </div>
-
-            <div>
-                <h4 class="text-white font-bold mb-4">Direct Contact</h4>
-                <ul class="space-y-3 text-xs">
-                    <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-brand-violet"></i> sshraddha.ssingh@gmail.com</li>
-                    <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-brand-violet"></i> (778) 898-1401</li>
-                    <li class="flex items-center gap-2"><i data-lucide="message-square" class="w-4 h-4 text-brand-violet"></i> SMS Notifications Enabled</li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="text-white font-bold mb-4">Quick Links</h4>
-                <ul class="space-y-2 text-xs">
-                    <li><a href="#about" class="hover:text-white">Why Choose Us</a></li>
-                    <li><a href="#offers" class="hover:text-white">Featured Offers</a></li>
-                    <li><a href="#services" class="hover:text-white">Services</a></li>
-                    <li><a href="#pilot" class="hover:text-white">14-Day Pilot</a></li>
-                    <li><a href="#founders" class="hover:text-white">Founders</a></li>
-                    <li><a href="#pricing" class="hover:text-white">Pricing</a></li>
-                    <li><a href="#faq" class="hover:text-white">FAQs</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-gray-900 text-xs text-center text-gray-400 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p>&copy; 2026 SheShootsSheSells Agency. All Rights Reserved.</p>
-            <p>Founded by Shraddha &amp; Brooke • Niagara Falls, Ontario</p>
-        </div>
-    </footer>
-
-    <!-- Interactive Scripts -->
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // 1. Initialize Lucide Icons
-        if (typeof lucide !== 'undefined') {
-            lucide.createIcons();
-        }
+(function(){
+  var btn=document.getElementById('menuBtn'),list=document.getElementById('navList');
+  btn.addEventListener('click',function(){var o=list.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+  list.addEventListener('click',function(e){if(e.target.tagName==='A'){list.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
 
-        // 2. Mobile Menu Toggle
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (menuBtn && mobileMenu) {
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
+  // Hero video: skip on reduced motion / data saver, pause when off-screen
+  var hv=document.getElementById('heroVideo'),conn=navigator.connection||{};
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches||conn.saveData){hv.removeAttribute('autoplay');hv.pause()}
+  else if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?hv.play().catch(function(){}):hv.pause()})}).observe(hv)}
 
-        // 3. FAQ Accordion Toggle (Handles converted SVG icons safely)
-        document.querySelectorAll('.faq-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                if (content) {
-                    content.classList.toggle('hidden');
-                }
-                
-                // Finds either svg or i so it doesn't break
-                const icon = button.querySelector('svg') || button.querySelector('i');
-                if (icon) {
-                    icon.classList.toggle('rotate-180');
-                }
-            });
-        });
+  // Click-to-play reels: one at a time, loaded on demand
+  var reels=document.querySelectorAll('.reel');
+  reels.forEach(function(r){
+    var v=r.querySelector('video'),b=r.querySelector('button');
+    b.addEventListener('click',function(){
+      reels.forEach(function(o){if(o!==r){o.querySelector('video').pause();o.classList.remove('playing')}});
+      r.classList.add('playing');v.controls=true;v.play().catch(function(){r.classList.remove('playing')});
     });
+    v.addEventListener('ended',function(){r.classList.remove('playing');v.controls=false});
+  });
+
+  // Offer buttons preselect the form
+  document.querySelectorAll('[data-offer]').forEach(function(a){
+    a.addEventListener('click',function(){var o=document.querySelector('#offer option[data-k="'+a.dataset.offer+'"]');if(o)o.selected=true});
+  });
+})();
 </script>
 </body>
 </html>
-
