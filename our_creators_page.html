@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Creators | She Shoots She Sells Agency</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            darkest: '#1C0207',
+                            dark: '#38040F',
+                            primary: '#520816',
+                            accent: '#7A0C22',
+                            bright: '#A8112E',
+                            glow: '#FF2A55',
+                            gold: '#D4AF37',
+                            glass: 'rgba(40, 4, 12, 0.65)'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Syne', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #1C0207;
+            color: #F3F4F6;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Card Style */
+        .glass-card {
+            background: rgba(82, 8, 22, 0.25);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 42, 85, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(255, 42, 85, 0.4);
+            box-shadow: 0 12px 40px 0 rgba(122, 12, 34, 0.4);
+        }
+
+        /* Ambient Glow Background Effects */
+        .glow-bg-top {
+            position: absolute;
+            top: -10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(122, 12, 34, 0.4) 0%, rgba(28, 2, 7, 0) 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            pointer-events: none;
+            opacity: 0.35;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1C0207;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #520816;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #7A0C22;
+        }
+
+        /* Smooth tab transition */
+        .filter-btn {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #7A0C22 0%, #A8112E 100%);
+            color: #FFFFFF;
+            box-shadow: 0 0 20px rgba(168, 17, 46, 0.5);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* SVG Sparkline Animation */
+        .sparkline-path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: dash 2.5s ease-in-out forwards;
+        }
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    </style>
+</head>
+<body class="relative min-h-screen">
+
+    <!-- Top Ambient Radial Glow -->
+    <div class="glow-bg-top"></div>
+    <div class="glow-orb w-96 h-96 bg-brand-bright top-96 -left-20"></div>
+    <div class="glow-orb w-80 h-80 bg-brand-accent top-[1200px] -right-20"></div>
+
+    <!-- Navigation Bar Placeholder -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-brand-darkest/80 border-b border-brand-primary/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-accent to-brand-bright flex items-center justify-center font-heading font-extrabold text-white text-xl shadow-lg shadow-brand-bright/20 group-hover:scale-105 transition-transform">
+                    SSSS
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-heading font-bold text-lg tracking-wider text-white uppercase leading-none">She Shoots She Sells</span>
+                    <span class="text-[10px] text-brand-glow/80 tracking-widest font-semibold uppercase mt-0.5">Creator Management Agency</span>
+                </div>
+            </a>
+
+            <!-- Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a>
+                <a href="#" class="text-gray-300 hover:text-white transition-colors">About Us</a>
+                <a href="#" class="text-brand-glow font-semibold border-b-2 border-brand-glow pb-1">Our Creators</a>
+                <a href="#" class="text-gray-300 hover:text-white transition-colors">Services</a>
+                <a href="#" class="text-gray-300 hover:text-white transition-colors">Creator 101 Guide</a>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="hidden sm:flex items-center gap-4">
+                <button onclick="openApplyModal()" class="relative inline-flex items-center justify-center px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-brand-accent to-brand-bright rounded-full overflow-hidden shadow-lg shadow-brand-bright/25 hover:shadow-brand-glow/40 hover:scale-105 transition-all">
+                    <span>Apply For Management</span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-gray-300 hover:text-white" onclick="toggleMobileNav()">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-darkest/95 border-b border-brand-primary p-6 space-y-4">
+            <a href="#" class="block text-gray-300 hover:text-white">Home</a>
+            <a href="#" class="block text-gray-300 hover:text-white">About Us</a>
+            <a href="#" class="block text-brand-glow font-semibold">Our Creators</a>
+            <a href="#" class="block text-gray-300 hover:text-white">Services</a>
+            <a href="#" class="block text-gray-300 hover:text-white">Creator 101 Guide</a>
+            <button onclick="openApplyModal()" class="w-full mt-4 py-3 text-center text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-brand-accent to-brand-bright rounded-full">Apply For Management</button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-16 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center z-10">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-primary/40 border border-brand-glow/30 text-brand-glow text-xs font-semibold tracking-wide uppercase mb-6 shadow-inner">
+            <i class="fa-solid fa-gem text-xs"></i>
+            <span>Female-Led Creator Elevation</span>
+        </div>
+        
+        <h1 class="font-heading font-extrabold text-4xl sm:text-6xl lg:text-7xl tracking-tight text-white max-w-4xl mx-auto leading-tight">
+            Real Creators. <br>
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-white via-brand-glow to-red-400">Unstoppable Revenue Growth.</span>
+        </h1>
+        
+        <p class="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            From complete beginners launching their digital footprint to established icons seeking full account management & monetization optimization. Here's how we scale female creators.
+        </p>
+
+        <!-- Dynamic Overall Agency Stats -->
+        <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            <div class="glass-card p-5 rounded-2xl">
+                <div class="text-2xl sm:text-3xl font-heading font-bold text-white">$2.8M+</div>
+                <div class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Creator Revenue Generated</div>
+            </div>
+            <div class="glass-card p-5 rounded-2xl">
+                <div class="text-2xl sm:text-3xl font-heading font-bold text-brand-glow">4.8x</div>
+                <div class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Avg. 90-Day Revenue Boost</div>
+            </div>
+            <div class="glass-card p-5 rounded-2xl">
+                <div class="text-2xl sm:text-3xl font-heading font-bold text-white">100%</div>
+                <div class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Female Owned & Operated</div>
+            </div>
+            <div class="glass-card p-5 rounded-2xl">
+                <div class="text-2xl sm:text-3xl font-heading font-bold text-brand-glow">350+</div>
+                <div class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Guide Alumni Scaled</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FILTER BUTTONS SECTION -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 z-10 relative">
+        <div class="flex flex-wrap items-center justify-center gap-3">
+            <button onclick="filterCreators('all')" class="filter-btn active px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider border border-brand-primary/60 bg-brand-dark/50 text-gray-300 hover:border-brand-glow/50">
+                All Creators
+            </button>
+            <button onclick="filterCreators('full-management')" class="filter-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider border border-brand-primary/60 bg-brand-dark/50 text-gray-300 hover:border-brand-glow/50">
+                <i class="fa-solid fa-crown text-brand-gold mr-1.5"></i> Full Account Management
+            </button>
+            <button onclick="filterCreators('strategy')" class="filter-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider border border-brand-primary/60 bg-brand-dark/50 text-gray-300 hover:border-brand-glow/50">
+                <i class="fa-solid fa-chart-line mr-1.5 text-brand-glow"></i> Strategy & Pricing
+            </button>
+            <button onclick="filterCreators('beginners')" class="filter-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider border border-brand-primary/60 bg-brand-dark/50 text-gray-300 hover:border-brand-glow/50">
+                <i class="fa-solid fa-seedling mr-1.5 text-emerald-400"></i> Brand Beginners
+            </button>
+            <button onclick="filterCreators('guide-alumni')" class="filter-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider border border-brand-primary/60 bg-brand-dark/50 text-gray-300 hover:border-brand-glow/50">
+                <i class="fa-solid fa-book-open mr-1.5 text-purple-400"></i> Guide Alumni
+            </button>
+        </div>
+    </section>
+
+    <!-- CREATORS SHOWCASE GRID -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 z-10 relative">
+        <div id="creators-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- CREATOR CARD 1 -->
+            <div class="creator-card glass-card rounded-3xl p-6 transition-all duration-300 flex flex-col justify-between" data-category="full-management">
+                <div>
+                    <!-- Header with Avatar & Badge -->
+                    <div class="flex items-start justify-between gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Creator Avatar" class="w-14 h-14 rounded-2xl object-cover border-2 border-brand-bright">
+                                <span class="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 border-2 border-brand-darkest rounded-full flex items-center justify-center text-[9px] text-white" title="Verified Creator"><i class="fa-solid fa-check"></i></span>
+                            </div>
+                            <div>
+                                <h3 class="font-heading font-bold text-lg text-white leading-tight">Sienna Vance</h3>
+                                <p class="text-xs text-brand-glow font-medium">@siennavance • Fashion & Lifestyle</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Journey Tag -->
+                    <div class="mt-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-brand-primary/60 border border-brand-bright/30 text-[11px] font-semibold text-white">
+                        <i class="fa-solid fa-crown text-brand-gold"></i>
+                        <span>Full Account Management</span>
+                    </div>
+
+                    <p class="mt-4 text-xs text-gray-300 leading-relaxed">
+                        Handed over 100% of her branding, content scheduling, and agency pricing negotiations to SSSS. Scaled her monthly revenue by 620% in under 5 months.
+                    </p>
+                </div>
+
+                <!-- EARNING STATS SNAPSHOT WIDGET -->
+                <div class="mt-6 pt-4 border-t border-brand-primary/40">
+                    <div class="bg-brand-darkest/70 rounded-2xl p-4 border border-brand-primary/60">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">30-Day Revenue</span>
+                            <span class="text-[10px] font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2 py-0.5 rounded-full">+412% Growth</span>
+                        </div>
+                        <div class="text-2xl font-heading font-extrabold text-white mt-1">$24,850.00</div>
+                        
+                        <!-- Sparkline chart -->
+                        <div class="mt-3 h-10 w-full">
+                            <svg class="w-full h-full overflow-visible" viewBox="0 0 100 30">
+                                <path class="sparkline-path" d="M 0,25 Q 20,20 40,15 T 80,8 T 100,2" fill="none" stroke="#FF2A55" stroke-width="2.5"/>
+                                <circle cx="100" cy="2" r="3" fill="#FF2A55" />
+                            </svg>
+                        </div>
+                        <div class="flex justify-between text-[9px] text-gray-500 mt-1">
+                            <span>Day 1</span>
+                            <span>Day 15</span>
+                            <span>Today</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CREATOR CARD 2 -->
+            <div class="creator-card glass-card rounded-3xl p-6 transition-all duration-300 flex flex-col justify-between" data-category="strategy">
+                <div>
+                    <!-- Header with Avatar & Badge -->
+                    <div class="flex items-start justify-between gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80" alt="Creator Avatar" class="w-14 h-14 rounded-2xl object-cover border-2 border-brand-bright">
+                                <span class="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 border-2 border-brand-darkest rounded-full flex items-center justify-center text-[9px] text-white"><i class="fa-solid fa-check"></i></span>
+                            </div>
+                            <div>
+                                <h3 class="font-heading font-bold text-lg text-white leading-tight">Maya Lin</h3>
+                                <p class="text-xs text-brand-glow font-medium">@mayacreates • Tech & Beauty</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Journey Tag -->
+                    <div class="mt-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-brand-primary/60 border border-brand-bright/30 text-[11px] font-semibold text-white">
+                        <i class="fa-solid fa-chart-line text-brand-glow"></i>
+                        <span>Strategy & Monetization</span>
+                    </div>
+
+                    <p class="mt-4 text-xs text-gray-300 leading-relaxed">
+                        Had existing social accounts with high engagement but was severely under-pricing brand deals. SSSS overhauled her media kit, brand rate strategy, and pitch scripts.
+                    </p>
+                </div>
+
+                <!-- EARNING STATS SNAPSHOT WIDGET -->
+                <div class="mt-6 pt-4 border-t border-brand-primary/40">
+                    <div class="bg-brand-darkest/70 rounded-2xl p-4 border border-brand-primary/60">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">30-Day Revenue</span>
+                            <span class="text-[10px] font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2 py-0.5 rounded-full">+280% Growth</span>
+                        </div>
+                        <div class="text-2xl font-heading font-extrabold text-white mt-1">$18,400.00</div>
+                        
+                        <!-- Sparkline chart -->
+                        <div class="mt-3 h-10 w-full">
+                            <svg class="w-full h-full overflow-visible" viewBox="0 0 100 30">
+                                <path class="sparkline-path" d="M 0,28 L 25,22 L 50,18 L 75,10 L 100,4" fill="none" stroke="#FF2A55" stroke-width="2.5"/>
+                                <circle cx="100" cy="4" r="3" fill="#FF2A55" />
+                            </svg>
+                        </div>
+                        <div class="flex justify-between text-[9px] text-gray-500 mt-1">
+                            <span>Day 1</span>
+                            <span>Day 15</span>
+                            <span>Today</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CREATOR CARD 3 -->
+            <div class="creator-card glass-card rounded-3xl p-6 transition-all duration-300 flex flex-col justify-between" data-category="beginners">
+                <div>
+                    <!-- Header with Avatar & Badge -->
+                    <div class="flex items-start justify-between gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80" alt="Creator Avatar" class="w-14 h-14 rounded-2xl object-cover border-2 border-brand-bright">
+                                <span class="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 border-2 border-brand-darkest rounded-full flex items-center justify-center text-[9px] text-white"><i class="fa-solid fa-check"></i></span>
+                            </div>
+                            <div>
+                                <h3 class="font-heading font-bold text-lg text-white leading-tight">Elena Rostova</h3>
+                                <p class="text-xs text-brand-glow font-medium">@elena.fits • Fitness & UGC</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Journey Tag -->
+                    <div class="mt-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-brand-primary/60 border border-brand-bright/30 text-[11px] font-semibold text-white">
+                        <i class="fa-solid fa-seedling text-emerald-400"></i>
+                        <span>Brand Beginner</span>
+                    </div>
+
+                    <p class="mt-4 text-xs text-gray-300 leading-relaxed">
+                        Started with 0 followers and zero video shooting experience. SSSS provided full content blueprints, studio camera setup advice, and first brand placement outreach.
+                    </p>
+                </div>
+
+                <!-- EARNING STATS SNAPSHOT WIDGET -->
+                <div class="mt-6 pt-4 border-t border-brand-primary/40">
+                    <div class="bg-brand-darkest/70 rounded-2xl p-4 border border-brand-primary/60">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">30-Day Revenue</span>
+                            <span class="text-[10px] font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2 py-0.5 rounded-full">First Month Success</span>
+                        </div>
+                        <div class="text-2xl font-heading font-extrabold text-white mt-1">$9,650.00</div>
+                        
+                        <!-- Sparkline chart -->
+                        <div class="mt-3 h-10 w-full">
+                            <svg class="w-full h-full overflow-visible" viewBox="0 0 100 30">
+                                <path class="sparkline-path" d="M 0,29 Q 30,28 60,12 T 100,5" fill="none" stroke="#4ADE80" stroke-width="2.5"/>
+                                <circle cx="100" cy="5" r="3" fill="#4ADE80" />
+                            </svg>
+                        </div>
+                        <div class="flex justify-between text-[9px] text-gray-500 mt-1">
+                            <span>Day 1</span>
+                            <span>Day 15</span>
+                            <span>Today</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CREATOR CARD 4 -->
+            <div class="creator-card glass-card rounded-3xl p-6 transition-all duration-300 flex flex-col justify-between" data-category="guide-alumni">
+                <div>
+                    <!-- Header with Avatar & Badge -->
+                    <div class="flex items-start justify-between gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Creator Avatar" class="w-14 h-14 rounded-2xl object-cover border-2 border-brand-bright">
+                                <span class="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 border-2 border-brand-darkest rounded-full flex items-center justify-center text-[9px] text-white"><i class="fa-solid fa-check"></i></span>
+                            </div>
+                            <div>
+                                <h3 class="font-heading font-bold text-lg text-white leading-tight">Chloe Bennett</h3>
+                                <p class="text-xs text-brand-glow font-medium">@chloe_glows • Skincare & Wellness</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Journey Tag -->
+                    <div class="mt-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-brand-primary/60 border border-brand-bright/30 text-[11px] font-semibold text-white">
+                        <i class="fa-solid fa-book-open text-purple-400"></i>
+                        <span>Creator 101 Guide Alumni</span>
+                    </div>
+
+                    <p class="mt-4 text-xs text-gray-300 leading-relaxed">
+                        Purchased the SSSS Creator 101 Guide to self-optimize her pitching process. Implemented our viral hook frameworks and automated contract templates.
+                    </p>
+                </div>
+
+                <!-- EARNING STATS SNAPSHOT WIDGET -->
+                <div class="mt-6 pt-4 border-t border-brand-primary/40">
+                    <div class="bg-brand-darkest/70 rounded-2xl p-4 border border-brand-primary/60">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">30-Day Revenue</span>
+                            <span class="text-[10px] font-semibold text-purple-300 bg-purple-950/60 border border-purple-500/30 px-2 py-0.5 rounded-full">DIY Guide Success</span>
+                        </div>
+                        <div class="text-2xl font-heading font-extrabold text-white mt-1">$12,300.00</div>
+                        
+                        <!-- Sparkline chart -->
+                        <div class="mt-3 h-10 w-full">
+                            <svg class="w-full h-full overflow-visible" viewBox="0 0 100 30">
+                                <path class="sparkline-path" d="M 0,26 Q 35,24 70,10 T 100,6" fill="none" stroke="#C084FC" stroke-width="2.5"/>
+                                <circle cx="100" cy="6" r="3" fill="#C084FC" />
+                            </svg>
+                        </div>
+                        <div class="flex justify-between text-[9px] text-gray-500 mt-1">
+                            <span>Day 1</span>
+                            <span>Day 15</span>
+                            <span>Today</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CREATOR CARD 5 -->
+            <div class="creator-card glass-card rounded-3xl p-6 transition-all duration-300 flex flex-col justify-between" data-category="full-management">
+                <div>
+                    <!-- Header with Avatar & Badge -->
+                    <div class="flex items-start justify-between gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" alt="Creator Avatar" class="w-14 h-14 rounded-2xl object-cover border-2 border-brand-bright">
+                                <span class="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 border-2 border-brand-darkest rounded-full flex items-center justify-center text-[9px] text-white"><i class="fa-solid fa-check"></i></span>
+                            </div>
+                            <div>
+                                <h3 class="font-heading font-bold text-lg text-white leading-tight">Jasmine Taylor</h3>
+                                <p class="text-xs text-brand-glow font-medium">@jasminetravels • Travel & UGC</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Journey Tag -->
+                    <div class="mt-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-brand-primary/60 border border-brand-bright/30 text-[11px] font-semibold text-white">
+                        <i class="fa-solid fa-crown text-brand-gold"></i>
+                        <span>Full Account Management</span>
+                    </div>
+
+                    <p class="mt-4 text-xs text-gray-300 leading-relaxed">
+                        Wanted to focus 100% on traveling and filming while SSSS handled brand communications, invoicing, platform management, and cross-channel distribution.
+                    </p>
+                </div>
+
+                <!-- EARNING STATS SNAPSHOT WIDGET -->
+                <div class="mt-6 pt-4 border-t border-brand-primary/40">
+                    <div class="bg-brand-darkest/70 rounded-2xl p-4 border border-brand-primary/60">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">30-Day Revenue</span>
+                            <span class="text-[10px] font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2 py-0.5 rounded-full">+530% Growth</span>
+                        </div>
+                        <div class="text-2xl font-heading font-extrabold text-white mt-1">$31,200.00</div>
+                        
+                        <!-- Sparkline chart -->
+                        <div class="mt-3 h-10 w-full">
+                            <svg class="w-full h-full overflow-visible" viewBox="0 0 100 30">
+                                <path class="sparkline-path" d="M 0,27 L 20,22 L 50,14 L 80,6 L 100,1" fill="none" stroke="#FF2A55" stroke-width="2.5"/>
+                                <circle cx="100" cy="1" r="3" fill="#FF2A55" />
+                            </svg>
+                        </div>
+                        <div class="flex justify-between text-[9px] text-gray-500 mt-1">
+                            <span>Day 1</span>
+                            <span>Day 15</span>
+                            <span>Today</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CREATOR CARD 6 -->
+            <div class="creator-card glass-card rounded-3xl p-6 transition-all duration-300 flex flex-col justify-between" data-category="strategy">
+                <div>
+                    <!-- Header with Avatar & Badge -->
+                    <div class="flex items-start justify-between gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=200&q=80" alt="Creator Avatar" class="w-14 h-14 rounded-2xl object-cover border-2 border-brand-bright">
+                                <span class="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 border-2 border-brand-darkest rounded-full flex items-center justify-center text-[9px] text-white"><i class="fa-solid fa-check"></i></span>
+                            </div>
+                            <div>
+                                <h3 class="font-heading font-bold text-lg text-white leading-tight">Aria Thorne</h3>
+                                <p class="text-xs text-brand-glow font-medium">@ariathorne • Fitness & UGC</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Journey Tag -->
+                    <div class="mt-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-brand-primary/60 border border-brand-bright/30 text-[11px] font-semibold text-white">
+                        <i class="fa-solid fa-chart-line text-brand-glow"></i>
+                        <span>Strategy & Pricing</span>
+                    </div>
+
+                    <p class="mt-4 text-xs text-gray-300 leading-relaxed">
+                        Transitioned from low-paying $100 gifted collabs to $2,500+ retainers per brand partner after SSSS restructured her brand positioning strategy.
+                    </p>
+                </div>
+
+                <!-- EARNING STATS SNAPSHOT WIDGET -->
+                <div class="mt-6 pt-4 border-t border-brand-primary/40">
+                    <div class="bg-brand-darkest/70 rounded-2xl p-4 border border-brand-primary/60">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">30-Day Revenue</span>
+                            <span class="text-[10px] font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2 py-0.5 rounded-full">+350% Growth</span>
+                        </div>
+                        <div class="text-2xl font-heading font-extrabold text-white mt-1">$15,750.00</div>
+                        
+                        <!-- Sparkline chart -->
+                        <div class="mt-3 h-10 w-full">
+                            <svg class="w-full h-full overflow-visible" viewBox="0 0 100 30">
+                                <path class="sparkline-path" d="M 0,28 Q 40,20 70,12 T 100,3" fill="none" stroke="#FF2A55" stroke-width="2.5"/>
+                                <circle cx="100" cy="3" r="3" fill="#FF2A55" />
+                            </svg>
+                        </div>
+                        <div class="flex justify-between text-[9px] text-gray-500 mt-1">
+                            <span>Day 1</span>
+                            <span>Day 15</span>
+                            <span>Today</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BEFORE & AFTER CASE STUDIES WIDGET -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 z-10 relative">
+        <div class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden border border-brand-bright/30">
+            <div class="max-w-3xl">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-glow">Case Study Transformation</span>
+                <h2 class="font-heading font-bold text-3xl sm:text-4xl text-white mt-2">The She Shoots She Sells Difference</h2>
+                <p class="text-gray-300 text-sm mt-3">See how structured account optimization, strategic brand pitching, and female empowerment elevate monthly earnings.</p>
+            </div>
+
+            <!-- Case Study Interactive Grid -->
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- BEFORE -->
+                <div class="bg-brand-darkest/90 rounded-2xl p-6 border border-red-900/40 relative">
+                    <span class="absolute top-4 right-4 px-3 py-1 bg-red-950/80 text-red-400 border border-red-800/40 rounded-full text-xs font-bold uppercase tracking-wider">Before Joining SSSS</span>
+                    <ul class="space-y-4 mt-4 text-xs text-gray-300">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-xmark text-red-500 text-base"></i>
+                            <span>Irregular posting & unclear brand positioning</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-xmark text-red-500 text-base"></i>
+                            <span>Accepting low-value gifted product deals</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-xmark text-red-500 text-base"></i>
+                            <span>Uncertainty in contract negotiations & pricing</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-xmark text-red-500 text-base"></i>
+                            <span>Avg. Monthly Revenue: <strong>$800 - $1,500 / mo</strong></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- AFTER -->
+                <div class="bg-gradient-to-br from-brand-primary/90 to-brand-dark/90 rounded-2xl p-6 border border-brand-glow/50 relative shadow-2xl">
+                    <span class="absolute top-4 right-4 px-3 py-1 bg-brand-bright text-white rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">With SSSS Management</span>
+                    <ul class="space-y-4 mt-4 text-xs text-white">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-emerald-400 text-base"></i>
+                            <span>Tailored Content Calendar & High-Converting Hooks</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-emerald-400 text-base"></i>
+                            <span>Dedicated Agent Pitching to Tier-1 Global Brands</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-emerald-400 text-base"></i>
+                            <span>Invoicing, Legal Contracts, & Usage Rights Managed</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-emerald-400 text-base"></i>
+                            <span>Avg. Monthly Revenue: <strong class="text-brand-glow text-sm">$12,000 - $35,000+ / mo</strong></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT CREATOR 101 GUIDE BANNER -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 z-10 relative">
+        <div class="bg-gradient-to-r from-brand-dark via-brand-primary to-brand-accent rounded-3xl p-8 sm:p-12 border border-brand-bright/40 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-10">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-bright/30 text-white text-xs font-bold uppercase tracking-wider mb-4 border border-brand-glow/40">
+                    <i class="fa-solid fa-book"></i> Instant Download Blueprint
+                </div>
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white leading-tight">
+                    Want to Scale Your Creator Business on Your Own Terms?
+                </h2>
+                <p class="text-gray-200 text-sm mt-4 leading-relaxed">
+                    Get the exact playbook used by our top 6-figure agency creators. The <strong>Content Creator 101 Guide</strong> includes viral hook templates, rate calculator formulas, brand pitch emails, and contract protection checklists.
+                </p>
+                <div class="mt-6 flex flex-wrap items-center gap-4 text-xs text-gray-300">
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-brand-glow"></i> 80+ Pages of Strategy</span>
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-brand-glow"></i> Pitch Templates</span>
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-brand-glow"></i> Rate Calculator</span>
+                </div>
+            </div>
+
+            <!-- Guide Preview Mockup / CTA -->
+            <div class="flex flex-col items-center glass-card p-6 rounded-2xl border border-brand-bright/50 w-full lg:w-80 text-center">
+                <div class="w-28 h-36 bg-gradient-to-tr from-brand-accent to-brand-bright rounded-lg shadow-2xl flex flex-col items-center justify-center p-3 border border-white/20 transform -rotate-3 hover:rotate-0 transition-transform duration-300">
+                    <span class="font-heading font-black text-white text-xs tracking-widest uppercase">Content Creator</span>
+                    <span class="font-heading font-bold text-brand-gold text-lg">101</span>
+                    <span class="text-[8px] text-gray-200 mt-2 uppercase tracking-widest">SSSS Agency</span>
+                </div>
+                <div class="mt-4 text-xl font-bold text-white">$47.00 <span class="text-xs text-gray-400 line-through">$149.00</span></div>
+                <button onclick="alert('Redirecting to checkout page for Content Creator 101 Guide!')" class="mt-3 w-full py-3 bg-white text-brand-darkest font-heading font-bold text-xs uppercase tracking-wider rounded-xl hover:bg-gray-100 transition-colors shadow-lg">
+                    Buy The Guide Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION & CONSULTATION FORM MODAL TRIGGER -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center z-10 relative">
+        <h2 class="font-heading font-extrabold text-3xl sm:text-5xl text-white">
+            Ready to Scale Your Creator Business?
+        </h2>
+        <p class="text-gray-300 text-base max-w-xl mx-auto mt-4">
+            Whether you need full account management or strategic direction, She Shoots She Sells is ready to elevate your career.
+        </p>
+        <div class="mt-8 flex justify-center gap-4">
+            <button onclick="openApplyModal()" class="px-8 py-4 bg-gradient-to-r from-brand-accent via-brand-bright to-brand-glow text-white font-heading font-bold text-sm uppercase tracking-wider rounded-full shadow-2xl hover:scale-105 transition-transform">
+                Apply For Representation
+            </button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-brand-primary/50 bg-brand-darkest/90 py-10">
+        <div class="max-w-7xl mx-auto px-4 text-center sm:flex sm:justify-between sm:text-left text-xs text-gray-400">
+            <div>
+                <p class="font-heading font-bold text-white text-sm">SHE SHOOTS SHE SELLS</p>
+                <p class="mt-1">Empowering female content creators globally.</p>
+            </div>
+            <div class="mt-4 sm:mt-0 space-x-6">
+                <a href="#" class="hover:text-white">Instagram</a>
+                <a href="#" class="hover:text-white">TikTok</a>
+                <a href="#" class="hover:text-white">Privacy Policy</a>
+                <a href="#" class="hover:text-white">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL APPLICATION DIALOG -->
+    <div id="apply-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden">
+        <div class="glass-card max-w-lg w-full rounded-3xl p-8 border border-brand-bright/50 relative">
+            <button onclick="closeApplyModal()" class="absolute top-6 right-6 text-gray-400 hover:text-white text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h3 class="font-heading font-bold text-2xl text-white">Apply For Representation</h3>
+            <p class="text-xs text-gray-300 mt-1">Fill in your details below and our talent management team will review your profile.</p>
+
+            <form class="mt-6 space-y-4 text-left" onsubmit="handleFormSubmit(event)">
+                <div>
+                    <label class="text-[11px] font-bold text-gray-300 uppercase tracking-wider block mb-1">Full Name</label>
+                    <input type="text" required placeholder="Jane Doe" class="w-full bg-brand-darkest/90 border border-brand-primary/80 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-brand-glow">
+                </div>
+                <div>
+                    <label class="text-[11px] font-bold text-gray-300 uppercase tracking-wider block mb-1">Primary Social Handle</label>
+                    <input type="text" required placeholder="@yourhandle" class="w-full bg-brand-darkest/90 border border-brand-primary/80 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-brand-glow">
+                </div>
+                <div>
+                    <label class="text-[11px] font-bold text-gray-300 uppercase tracking-wider block mb-1">Desired Management Level</label>
+                    <select class="w-full bg-brand-darkest/90 border border-brand-primary/80 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-brand-glow">
+                        <option value="full">Full Account Management</option>
+                        <option value="strategy">Strategy & Brand Pitching</option>
+                        <option value="beginner">Brand Beginner Setup</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="text-[11px] font-bold text-gray-300 uppercase tracking-wider block mb-1">Current Monthly Earnings ($USD)</label>
+                    <input type="text" placeholder="$0 - $5,000+" class="w-full bg-brand-darkest/90 border border-brand-primary/80 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-brand-glow">
+                </div>
+                <button type="submit" class="w-full py-3 mt-2 bg-gradient-to-r from-brand-accent to-brand-bright text-white font-heading font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg hover:scale-[1.02] transition-transform">
+                    Submit Application
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Category Filter Functionality
+        function filterCreators(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.creator-card');
+
+            // Update button styles
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active');
+
+            // Filter creator cards
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                if (category === 'all' || cardCategory === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Modal Functionality
+        function openApplyModal() {
+            document.getElementById('apply-modal').classList.remove('hidden');
+        }
+
+        function closeApplyModal() {
+            document.getElementById('apply-modal').classList.add('hidden');
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            alert('Thank you for applying to She Shoots She Sells! Our agency management team will reach out within 48 hours.');
+            closeApplyModal();
+        }
+
+        // Mobile Navigation Toggle
+        function toggleMobileNav() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
