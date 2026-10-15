@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#2a0a12">
 <meta property="og:title" content="She Shoots She Sells | Creator Management Agency">
 <meta property="og:description" content="Female-owned and led creator management in Ontario.">
-<meta property="og:image" content="logo_branding_web_banner.jpg">
+<meta property="og:image" content="banner.jpg">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,13 +62,15 @@ header{position:sticky;top:0;z-index:50;background:rgba(36,9,16,.85);backdrop-fi
 }
 
 /* Hero */
-.hero{position:relative;min-height:92vh;display:grid;align-items:end;padding:0;overflow:hidden;isolation:isolate}
-.hero-media{position:absolute;inset:0;z-index:-2}
-.hero-media video,.hero-media img{width:100%;height:100%;object-fit:cover}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(36,9,16,.94) 8%,rgba(74,17,31,.6) 55%,rgba(36,9,16,.25)),linear-gradient(0deg,var(--oxblood),transparent 35%)}
-.hero-inner{padding:clamp(6rem,14vw,10rem) 0 clamp(3rem,7vw,5rem)}
-.hero p{font-size:1.2rem;color:#eadad5;max-width:52ch}
-.cta-row{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
+.hero{--bh:clamp(300px,58vw,84vh);position:relative;overflow:hidden;isolation:isolate;text-align:center}
+.hero-media{position:absolute;inset:0 0 auto;height:var(--bh);z-index:-1;-webkit-mask-image:linear-gradient(#000 60%,transparent);mask-image:linear-gradient(#000 60%,transparent)}
+.hero-media img,.hero-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.hero-media video{opacity:0;transition:opacity 1s}
+.hero-media video.on{opacity:1}
+.hero-inner{padding:calc(var(--bh) - 4rem) 0 clamp(3rem,7vw,5rem)}
+.hero h1{font-size:clamp(2.2rem,5.5vw,4.4rem)}
+.hero p{font-size:1.15rem;color:#eadad5;margin-inline:auto}
+.cta-row{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem;justify-content:center}
 .tag{display:inline-block;border:1px solid rgba(233,199,180,.45);color:var(--champagne);border-radius:999px;padding:.35rem 1rem;font-size:.85rem;margin-bottom:1.5rem;background:rgba(36,9,16,.4)}
 .hero h1 em{font-style:italic}
 
@@ -179,9 +181,11 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
 <!-- HERO: swap in your video files under /assets -->
 <section class="hero" id="top">
   <div class="hero-media">
-    <video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="logo_branding_web_banner.jpg" aria-hidden="true" tabindex="-1">
-      <source src="assets/hero.webm" type="video/webm">
-      <source src="assets/hero.mp4" type="video/mp4">
+    <img src="copy_F377E720-E52D-436F-A485-8E010467F9D4_capcut_ai_watermark.jpg" alt="She Shoots She Sells creator management agency logo on a burgundy wall" width="1920" height="1080" fetchpriority="high" decoding="async">
+    <!-- Optional: add assets/hero.webm / hero.mp4 and it fades in over the banner -->
+    <video id="heroVideo" autoplay muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1">
+      <source src="copy_9B362CE6-E392-442D-A2AC-E795C63C3E33.MOV" type="video/webm">
+      <source src="copy_F823903D-0146-4D4D-8B53-4D584F320BF9 copy.MOV" type="video/mp4">
     </video>
   </div>
   <div class="wrap hero-inner">
@@ -212,7 +216,7 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
       <p>No guesswork and no leaving money in your inbox. We set accounts up, fix pricing, staff your DMs and grow your reach without risking your accounts.</p>
       <a class="btn btn-ghost" href="#founders">Meet the founders</a>
     </div>
-    <div class="frame"><img src="logo_branding_web_banner.jpg" alt="She Shoots She Sells logo on a burgundy wall in a luxury lounge" width="1920" height="1080" loading="lazy" decoding="async"></div>
+    <div class="frame"><img src="founders.webp" alt="Shraddha and Brooke, co-founders of She Shoots She Sells" width="1400" height="933" loading="lazy" decoding="async"></div>
   </div>
 </section>
 
@@ -261,18 +265,6 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
   </div>
 </section>
 
-<!-- VIDEO SHOWCASE: replace src/poster with your assets. preload="none" keeps the page fast. -->
-<section id="showcase">
-  <div class="wrap">
-    <h2>See the standard we hold.</h2>
-    <p class="lead">Brand films and safe-for-work campaign clips from our creator roster. Tap to play.</p>
-    <div class="reels">
-      <div class="reel"><video preload="none" playsinline poster="assets/reel-1.jpg" aria-label="Brand showcase video 1"><source src="assets/reel-1.mp4" type="video/mp4"></video><button type="button"><span aria-hidden="true">&#9654;</span>Play brand film</button></div>
-      <div class="reel"><video preload="none" playsinline poster="assets/reel-2.jpg" aria-label="Campaign showcase video 2"><source src="assets/reel-2.mp4" type="video/mp4"></video><button type="button"><span aria-hidden="true">&#9654;</span>Play campaign clip</button></div>
-      <div class="reel"><video preload="none" playsinline poster="assets/reel-3.jpg" aria-label="Campaign showcase video 3"><source src="assets/reel-3.mp4" type="video/mp4"></video><button type="button"><span aria-hidden="true">&#9654;</span>Play creator story</button></div>
-    </div>
-  </div>
-</section>
 
 <section id="extras" style="background:var(--wine)">
   <div class="wrap">
@@ -316,14 +308,14 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
     <h2>Two founders. One standard.</h2>
     <div class="people">
       <article class="person">
-        <div class="frame"><img src="shraddha.PNG" alt="Shraddha, co-founder and growth principal" width="600" height="800" loading="lazy" decoding="async"></div>
+        <div class="frame"><img src="assets/shraddha.webp" alt="Shraddha, co-founder and growth principal" width="800" height="1067" loading="lazy" decoding="async"></div>
         <p class="role">Co-founder and Growth Principal</p>
         <h3>Shraddha</h3>
         <blockquote>Our mission is to give female creators the blueprint, security and support to turn their reach into a sustainable business.</blockquote>
         <a href="mailto:sshraddha.ssingh@gmail.com">sshraddha.ssingh@gmail.com</a>
       </article>
       <article class="person">
-        <div class="frame"><img src="brooke.png" alt="Brooke, co-founder and technical operations principal" width="600" height="800" loading="lazy" decoding="async"></div>
+        <div class="frame"><img src="assets/brooke.webp" alt="Brooke, co-founder and technical operations principal" width="800" height="1067" loading="lazy" decoding="async"></div>
         <p class="role">Co-founder and Technical Operations Principal</p>
         <h3>Brooke</h3>
         <blockquote>I co-founded She Shoots She Sells to give women the technical systems, privacy and freedom to build real wealth.</blockquote>
@@ -396,7 +388,7 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
   list.addEventListener('click',function(e){if(e.target.tagName==='A'){list.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
 
   // Hero video: skip on reduced motion / data saver, pause when off-screen
-  var hv=document.getElementById('heroVideo'),conn=navigator.connection||{};
+  var hv=document.getElementById('heroVideo'),conn=navigator.connection||{};hv.addEventListener('playing',function(){hv.classList.add('on')});
   if(matchMedia('(prefers-reduced-motion:reduce)').matches||conn.saveData){hv.removeAttribute('autoplay');hv.pause()}
   else if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?hv.play().catch(function(){}):hv.pause()})}).observe(hv)}
 
