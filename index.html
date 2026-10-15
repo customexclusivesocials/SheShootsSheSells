@@ -50,7 +50,7 @@ section{padding:clamp(4rem,9vw,7rem) 0}
 header{position:sticky;top:0;z-index:50;background:rgba(36,9,16,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(233,199,180,.15)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
 .logo{font:600 1.5rem var(--serif);text-decoration:none;letter-spacing:.02em}
-.nav ul{display:flex;gap:1.6rem;list-style:none;margin:0;padding:0;font-size:.9rem;font-weight:500}
+.nav ul{display:flex;gap:1.3rem;list-style:none;margin:0;padding:0;font-size:.9rem;font-weight:500}
 .nav ul a{text-decoration:none;color:var(--muted);transition:color .2s}
 .nav ul a:hover{color:var(--ivory)}
 .menu-btn{display:none;background:none;border:1px solid rgba(233,199,180,.4);color:var(--ivory);border-radius:8px;padding:.45rem .8rem;font:inherit;cursor:pointer}
@@ -166,7 +166,8 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#showcase">Showcase</a></li>
-      <li><a href="#offers">Pricing</a></li>
+      <li><a href="our_creators_page.html">Our creators</a></li>
+      <li><a href="#extras">Extras</a></li>
       <li><a href="#founders">Founders</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
@@ -186,10 +187,10 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
   <div class="wrap hero-inner">
     <span class="tag">Female-owned and led. Based in Ontario.</span>
     <h1>She shoots.<br><span class="metal"><em>She sells.</em></span></h1>
-    <p>We manage top-tier creators with sharper pricing, a trained 24/7 chat team and safe social funnels, so you can focus on the content and own your brand.</p>
+    <p>From first-time account setup to complete management, we help creators launch, grow and own their brand.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="#offers">Start with a $37 teardown</a>
-      <a class="btn btn-ghost" href="#pilot">See the 14-day pilot</a>
+      <a class="btn btn-primary" href="#booking" data-offer="setup">Book a free 1-on-1 call</a>
+      <a class="btn btn-ghost" href="#services">Explore services</a>
     </div>
   </div>
 </section>
@@ -208,7 +209,7 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
     <div>
       <h2>Built by women who know the work from the inside.</h2>
       <p class="lead">She Shoots She Sells is a female-owned and led agency for creators who want real systems, real privacy and real ownership of their business.</p>
-      <p>No guesswork and no leaving money in your inbox. We audit your funnel, fix pricing, staff your DMs and grow your reach on social platforms without risking your accounts.</p>
+      <p>No guesswork and no leaving money in your inbox. We set accounts up, fix pricing, staff your DMs and grow your reach without risking your accounts.</p>
       <a class="btn btn-ghost" href="#founders">Meet the founders</a>
     </div>
     <div class="frame"><img src="logo_branding_web_banner.jpg" alt="She Shoots She Sells logo on a burgundy wall in a luxury lounge" width="1920" height="1080" loading="lazy" decoding="async"></div>
@@ -217,24 +218,45 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
 
 <section class="services" id="services">
   <div class="wrap">
-    <h2>Everything you need to scale your earnings.</h2>
-    <p class="lead">Three services, built for female creators who are ready to treat their page like a business.</p>
-    <div class="svc">
-      <article>
-        <h3>Personalized growth plan</h3>
-        <p>A custom strategy to lift retention, tune your pricing tiers and grow pay-per-view revenue.</p>
-        <ul><li>Pricing and vault optimization</li><li>Subscriber retention</li><li>Daily upsell strategy</li></ul>
-      </article>
-      <article>
-        <h3>Social to subscriber funnel</h3>
-        <p>We run Instagram, TikTok and X promotion that turns followers into paying fans while keeping accounts safe.</p>
-        <ul><li>Insulated bridge-link funnels</li><li>Safe teaser strategy</li><li>SEO and hashtag systems</li></ul>
-      </article>
-      <article>
-        <h3>24/7 DM chatting</h3>
-        <p>A trained female chat team answers your inbox around the clock in your tone, selling PPVs and customs.</p>
-        <ul><li>Three rotating shifts</li><li>Open-loop scripting</li><li>Voice and persona matching</li></ul>
-      </article>
+    <h2>Pick the path that fits where you are.</h2>
+    <p class="lead">Every path starts with a free 1-on-1 call. We'll recommend the right level for your goals.</p>
+    <div class="tiers">
+      <div class="tier">
+        <h3>New creator setup</h3>
+        <div class="price">$200 setup<small>After your free call, if you decide to move forward</small></div>
+        <ul>
+          <li>subs.com and Linktree set up, all your links in one place</li>
+          <li>Fansly or OnlyFans set up: profile photo, banner, subscription tiers, bio and creator concept</li>
+          <li>First posts and DM inbox management</li>
+          <li>30-day content strategy and calendar, with a shared Google Drive folder</li>
+          <li>Our 101 Creator Guide (PDF)</li>
+          <li>Optional AI creator twin (extra fee)</li>
+        </ul>
+        <a class="btn btn-ghost" href="#booking" data-offer="setup">Book your free call</a>
+      </div>
+      <div class="tier">
+        <h3>Already creating</h3>
+        <div class="price">From $37<small>14-day inbox trial, then 20% of monthly revenue</small></div>
+        <ul>
+          <li>Full account analysis and review</li>
+          <li>One-page blueprint with improvements to implement</li>
+          <li>101 Creator Guide (PDF): content ideas, hundreds of hashtags, tier ideas, profile tips</li>
+          <li>Hand us your inbox: we manage all messaging</li>
+        </ul>
+        <a class="btn btn-ghost" href="#booking" data-offer="pilot">Start the 14-day trial</a>
+      </div>
+      <div class="tier feat">
+        <h3>Full account management</h3>
+        <div class="price">30% of revenue<small>Monthly. For new and established creators</small></div>
+        <ul>
+          <li>Everything in the other paths</li>
+          <li>We post for you</li>
+          <li>We handle all messaging</li>
+          <li>Content schedule and advertising</li>
+          <li>Complete account handoff</li>
+        </ul>
+        <a class="btn btn-primary" href="#booking" data-offer="full">Apply for management</a>
+      </div>
     </div>
   </div>
 </section>
@@ -252,34 +274,22 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
   </div>
 </section>
 
-<section id="offers" style="background:var(--wine)">
+<section id="extras" style="background:var(--wine)">
   <div class="wrap">
-    <h2>Start small. Scale when it works.</h2>
-    <p class="lead">Pick a single audit, a toolkit, a two-week trial or full management.</p>
-    <div class="tiers">
+    <h2>Extras to elevate your brand.</h2>
+    <p class="lead">Add these to any path, whether you're new or established.</p>
+    <div class="tiers" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
       <div class="tier">
-        <h3>72-hour teardown</h3>
-        <div class="price">$37 CAD<small>Free for qualified $3k+/mo creators</small></div>
-        <ul><li>10-minute personal video review</li><li>Scorecard across 5 revenue drivers</li><li>1-page plan with 3 fixes for the next 24 hours</li></ul>
-        <a class="btn btn-ghost" href="#booking" data-offer="teardown">Book the teardown</a>
+        <h3>Professional shoot days</h3>
+        <div class="price">$300 to $1,500<small>Per content day, scoped to your goals</small></div>
+        <ul><li>Professional video</li><li>Photoshoots</li><li>Drone video</li><li>A shoot plan built around the content you want</li></ul>
+        <a class="btn btn-ghost" href="#booking" data-offer="shoot">Plan a shoot</a>
       </div>
       <div class="tier">
-        <h3>30-day content vault</h3>
-        <div class="price">$29 CAD<small>Digital toolkit</small></div>
-        <ul><li>30 PPV scripts</li><li>Notion vault and scheduler</li><li>50 open-loop teaser hooks</li></ul>
-        <a class="btn btn-ghost" href="#booking" data-offer="toolkit">Get the toolkit</a>
-      </div>
-      <div class="tier feat">
-        <h3>14-day DM pilot</h3>
-        <div class="price">$190 CAD<small>Or 30% of earnings above your baseline</small></div>
-        <ul><li>24/7 female chat coverage</li><li>Voice and tone matching</li><li>Live revenue dashboard</li></ul>
-        <a class="btn btn-primary" href="#booking" data-offer="pilot">Apply for the pilot</a>
-      </div>
-      <div class="tier">
-        <h3>Full 360 management</h3>
-        <div class="price">20 to 30% share<small>We win when you win</small></div>
-        <ul><li>Everything in the pilot and teardown</li><li>Full chat and vault team</li><li>TikTok, Reels and X marketing</li><li>Direct line to the founders</li></ul>
-        <a class="btn btn-ghost" href="#booking" data-offer="full">Apply for management</a>
+        <h3>AI creator twin</h3>
+        <div class="price">$190 setup<small>Then $60 per month</small></div>
+        <ul><li>A digital twin built from your likeness, with your approval</li><li>4 AI videos every month (18+)</li><li>20 AI photos every month (18+)</li><li>Ready to post on your creator accounts</li></ul>
+        <a class="btn btn-primary" href="#booking" data-offer="twin">Ask about your twin</a>
       </div>
     </div>
   </div>
@@ -288,8 +298,8 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
 <section class="pilot" id="pilot">
   <div class="wrap split">
     <div>
-      <h2>Test our chat team for 14 days.</h2>
-      <p class="lead">Hand us your inbox for two weeks. We match your voice, you watch the numbers, and you decide after.</p>
+      <h2>Try our chat team for $37.</h2>
+      <p class="lead">Hand us your inbox for 14 days. If you want us to keep going, we take 20% of your monthly revenue.</p>
       <p>Chatting is done by trained women in Ontario after a 30-minute voice and persona session. You track unlock rates, mass DM earnings and tips on a live dashboard.</p>
       <a class="btn btn-primary" href="#booking" data-offer="pilot">Apply for the pilot</a>
     </div>
@@ -328,6 +338,8 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
 <section id="faq" style="background:var(--wine)">
   <div class="wrap" style="max-width:860px">
     <h2>Questions, answered.</h2>
+        <details><summary>Which path is right for me?</summary><p>Book the free 1-on-1 call. If you're new, we'll scope your setup. If you already have an account, we'll recommend a review, the inbox trial or full management.</p></details>
+    <details><summary>Is the AI creator twin safe and consensual?</summary><p>Your twin is built only from your own likeness, after identity verification and your written consent. You approve everything before it is posted, and content follows each platform's AI labeling rules. You can end the service and have your twin data deleted at any time.</p></details>
     <details><summary>How do you promote my account without shadowbans?</summary><p>We never post adult links directly on TikTok or Instagram. Profiles sit in SFW niches like fashion, fitness and cosplay, and traffic moves through neutral bridge pages using compliant wording.</p></details>
     <details><summary>How does the 14-day pilot work?</summary><p>Our female chat team takes over your DMs for 14 days using dedicated, secure access. We match your tone and use open-loop PPV scripting, and you track earnings live.</p></details>
     <details><summary>Who answers my subscribers?</summary><p>Only trained female chatters based in Ontario. Before going live we hold a 30-minute session to capture your vocabulary, emojis and boundaries.</p></details>
@@ -349,10 +361,13 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
       <div><label for="phone">Phone or SMS number</label><input id="phone" type="tel" name="phone" required autocomplete="tel"></div>
       <div><label for="offer">Offer</label>
         <select id="offer" name="interested_offer" required>
-          <option value="72-Hour Vault & Funnel Teardown ($37 CAD)" data-k="teardown">72-Hour Teardown ($37 CAD)</option>
-          <option value="Batch & Bank 30-Day Content Vault ($29 CAD)" data-k="toolkit">30-Day Content Vault ($29 CAD)</option>
-          <option value="14-Day DM Conversion & Revenue Pilot ($190 CAD)" data-k="pilot">14-Day DM Pilot ($190 CAD)</option>
-          <option value="Full 360 Creator Management" data-k="full">Full 360 Management</option>
+          <option value="Free 1-on-1 call: New Creator Setup ($200 setup)" data-k="setup">Free call: new creator setup</option>
+          <option value="Account Analysis and Blueprint" data-k="analysis">Account analysis and blueprint</option>
+          <option value="101 Creator Guide (PDF)" data-k="guide">101 Creator Guide (PDF)</option>
+          <option value="14-Day DM Trial ($37, then 20%)" data-k="pilot">14-day DM trial ($37)</option>
+          <option value="Full Account Management (30%)" data-k="full">Full account management</option>
+          <option value="Professional Shoot Day ($300-$1500)" data-k="shoot">Professional shoot day</option>
+          <option value="AI Creator Twin ($190 setup, $60/mo)" data-k="twin">AI creator twin</option>
         </select></div>
       <div class="full"><label for="message">Your goals and handles</label><textarea id="message" name="message" rows="4" required placeholder="Your social channels, estimated monthly revenue in CAD, and any questions"></textarea></div>
       <div class="full"><button class="btn btn-primary" type="submit" style="width:100%">Send consultation request</button></div>
