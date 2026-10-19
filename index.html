@@ -46,16 +46,29 @@ section{padding:clamp(4rem,9vw,7rem) 0}
 .btn-ghost{border-color:rgba(233,199,180,.5);color:var(--champagne)}
 .btn-ghost:hover{background:rgba(233,199,180,.1)}
 
-
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(36,9,16,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(233,199,180,.15)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:72px}
+.logo{font:600 1.5rem var(--serif);text-decoration:none;letter-spacing:.02em;white-space:nowrap}
+.nav ul{display:flex;gap:1.5rem;list-style:none;margin:0;padding:0;font-size:.9rem;font-weight:500}
+.nav ul a{text-decoration:none;color:var(--muted);transition:color .2s;white-space:nowrap}
+.nav ul a:hover{color:var(--ivory)}
+.nav>.btn{white-space:nowrap;padding:.7rem 1.3rem}
+.nav-cta{display:none}
+.menu-btn{display:none;background:none;border:1px solid rgba(233,199,180,.4);color:var(--ivory);border-radius:8px;padding:.5rem .9rem;font:inherit;cursor:pointer}
+@media(max-width:1180px){
+  .menu-btn{display:block}
+  .nav>.btn{display:none}
+  .nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--oxblood);padding:.4rem 4% 1.3rem;border-bottom:1px solid rgba(233,199,180,.25);box-shadow:0 24px 40px rgba(0,0,0,.55)}
+  .nav ul.open{display:flex}
+  .nav ul a{display:block;padding:.9rem 0;font-size:1rem;border-bottom:1px solid rgba(233,199,180,.1)}
+  .nav ul .nav-cta{display:block;margin-top:1.1rem}
+  .nav ul .nav-cta a{display:flex;border:0;padding:.95rem 1.8rem;color:#fff}
+}
 
 /* Hero */
-.hero{--bh:clamp(300px,58vw,84vh);position:relative;overflow:hidden;isolation:isolate;text-align:center}
-.hero-media{position:absolute;inset:0 0 auto;height:var(--bh);z-index:-1;-webkit-mask-image:linear-gradient(#000 60%,transparent);mask-image:linear-gradient(#000 60%,transparent)}
-.hero-media img,.hero-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
-.hero-media video{opacity:0;transition:opacity 1s}
-.hero-media video.on{opacity:1}
-.hero-inner{padding:calc(var(--bh) - 4rem) 0 clamp(3rem,7vw,5rem)}
-.hero h1{font-size:clamp(2.2rem,5.5vw,4.4rem)}
+.hero{position:relative;overflow:hidden;text-align:center;padding:clamp(4.5rem,11vw,8rem) 0 clamp(4rem,8vw,6rem);background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(176,28,56,.38),transparent 70%),linear-gradient(180deg,var(--oxblood),var(--wine))}
+.hero h1{font-size:clamp(2.8rem,8vw,6rem)}
 .hero p{font-size:1.15rem;color:#eadad5;margin-inline:auto}
 .cta-row{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem;justify-content:center}
 .tag{display:inline-block;border:1px solid rgba(233,199,180,.45);color:var(--champagne);border-radius:999px;padding:.35rem 1rem;font-size:.85rem;margin-bottom:1.5rem;background:rgba(36,9,16,.4)}
@@ -81,7 +94,6 @@ section{padding:clamp(4rem,9vw,7rem) 0}
 .svc p{margin:0;color:var(--muted)}
 .svc ul{margin:0;padding-left:1.1rem;color:var(--champagne);font-size:.92rem}
 @media(max-width:820px){.svc article{grid-template-columns:1fr;gap:.8rem}}
-
 
 /* Offers */
 .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.25rem;margin-top:3rem}
@@ -146,22 +158,28 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
       <li><a href="#extras">Shoots</a></li>
       <li><a href="#founders">Founder</a></li>
       <li><a href="#faq">FAQ</a></li>
+      <li class="nav-cta"><a class="btn btn-primary" href="#booking">Book a consultation</a></li>
     </ul>
     <a class="btn btn-primary" href="#booking">Book a consultation</a>
   </div>
 </header>
 
 <main id="main">
+<!-- HERO: Banner Image -->
 <section class="hero" id="top">
-  <div class="wrap hero-inner">
-    <span class="tag">Female-owned and led. Based in Ontario.</span>
-    <h1>She shoots.<br><span class="metal"><em>She sells.</em></span></h1>
-    <p>Launch kits, AI creator twins and step-by-step guides that help creators start strong, look polished and grow.</p>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="#booking" data-offer="setup">Book a free 1-on-1 call</a>
-      <a class="btn btn-ghost" href="#services">Explore services</a>
+    <div class="wrap hero-inner">
+        <!-- Paste your file name inside the src="" quotes below -->
+        <div class="hero-image-container">
+            <img src="LOGORED.jpeg" alt="Logo Red Banner" class="hero-banner-img">
+        </div>
+        <span class="tag">Female-owned and led. Based in Ontario.</span>
+        <h1>She shoots.<br><span class="metal"><em>She sells.</em></span><span></h1>
+        <p>Launch kits, AI creator twins and step-by-step guides that help creators start strong...</p>
+        <div class="cta-row">
+            <a class="btn btn-primary" href="#booking" data-offer="setup">Book a free 1-on-1 call</a>
+            <a class="btn btn-ghost" href="#services">Explore services</a>
+        </div>
     </div>
-  </div>
 </section>
 
 <div class="strip">
@@ -240,6 +258,7 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
   </div>
 </section>
 
+
 <section id="extras" style="background:var(--wine)">
   <div class="wrap">
     <h2>Add a professional shoot day.</h2>
@@ -257,7 +276,7 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
 
 <section id="founders">
   <div class="wrap split">
-    <div class="frame" style="max-width:460px;aspect-ratio:3/4"><img src="brooke.png" alt="Brooke, founder of She Shoots She Sells" width="800" height="1067" loading="lazy" decoding="async" style="height:100%;object-fit:cover"></div>
+    <div class="frame" style="max-width:460px;aspect-ratio:3/4"><img src="assets/brooke.webp" alt="Brooke, founder of She Shoots She Sells" width="800" height="1067" loading="lazy" decoding="async" style="height:100%;object-fit:cover"></div>
     <div>
       <p class="role">Founder and Technical Operations Principal</p>
       <h2>Meet Brooke.</h2>
@@ -324,11 +343,6 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
   var btn=document.getElementById('menuBtn'),list=document.getElementById('navList');
   btn.addEventListener('click',function(){var o=list.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
   list.addEventListener('click',function(e){if(e.target.tagName==='A'){list.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
-
-  // Hero video: skip on reduced motion / data saver, pause when off-screen
-  var hv=document.getElementById('heroVideo'),conn=navigator.connection||{};hv.addEventListener('playing',function(){hv.classList.add('on')});
-  if(matchMedia('(prefers-reduced-motion:reduce)').matches||conn.saveData){hv.removeAttribute('autoplay');hv.pause()}
-  else if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?hv.play().catch(function(){}):hv.pause()})}).observe(hv)}
 
   // Click-to-play reels: one at a time, loaded on demand
   var reels=document.querySelectorAll('.reel');
