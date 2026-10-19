@@ -4,8 +4,7 @@ This repository contains the official website source code for **SheShootsSheSell
 
 ## Business Overview
 - **Business Name**: SheShootsSheSells[cite: 1]
-- **Contact**: Shraddha (sshraddha.ssingh@gmail.com | 778-898-1401)[cite: 1]
-- **Location**: 7171 Lionshead Avenue, Niagara Falls, Ontario[cite: 1]
+- **Contact**:customexclusivesocials@gmail.co
 - **Target Market**: Female Content Creators (Ages 19–35) across Ontario[cite: 3, 5]
 - **Key Positioning**: 100% Female Founded & Managed, ensuring trust, privacy, and full content strategy/shooting/marketing support[cite: 5, 11].
 
