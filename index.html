@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,14 +89,6 @@ header{position:sticky;top:0;z-index:50;background:rgba(36,9,16,.94);backdrop-fi
 
 /* Services */
 .services{background:linear-gradient(180deg,var(--oxblood),var(--wine))}
-.svc{display:grid;gap:0;margin-top:3rem;border-top:1px solid rgba(233,199,180,.25)}
-.svc article{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:2rem;padding:2rem 0;border-bottom:1px solid rgba(233,199,180,.25)}
-.svc h3{margin:0}
-.svc p{margin:0;color:var(--muted)}
-.svc ul{margin:0;padding-left:1.1rem;color:var(--champagne);font-size:.92rem}
-@media(max-width:820px){.svc article{grid-template-columns:1fr;gap:.8rem}}
-
-/* Offers */
 .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.25rem;margin-top:3rem}
 .tier{display:flex;flex-direction:column;padding:2rem;border-radius:22px;background:rgba(74,17,31,.55);border:1px solid rgba(233,199,180,.2)}
 .tier.feat{background:linear-gradient(160deg,var(--burgundy),var(--wine));border-color:var(--ember);box-shadow:var(--glow)}
@@ -104,7 +97,6 @@ header{position:sticky;top:0;z-index:50;background:rgba(36,9,16,.94);backdrop-fi
 .tier ul{list-style:none;padding:0;margin:1.2rem 0 1.8rem;flex:1;font-size:.95rem}
 .tier li{padding:.35rem 0 .35rem 1.6rem;position:relative}
 .tier li::before{content:"";position:absolute;left:0;top:.8rem;width:.7rem;height:.4rem;border-left:2px solid var(--ember);border-bottom:2px solid var(--ember);transform:rotate(-45deg)}
-
 
 /* Founders */
 .people{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:3rem}
@@ -156,23 +148,7 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
       <li><a href="#extras">Shoots</a></li>
       <li><a href="#founders">Founder</a></li>
       <li><a href="#faq">FAQ</a></li>
-    <!-- Buy Social Media Guide Link (FIXED URL) -->
-<a href="https://buy.stripe.com/6oU28j9nW83Z0jWdL49bO0l" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-full border border-brand-bright/50 bg-brand-primary/40 hover:bg-brand-bright text-white text-xs font-bold uppercase tracking-wider transition-all">
-    <i class="fa-solid fa-bag-shopping text-[10px] text-brand-accent"></i>
-    <span>Social Kit</span>
-</a>
-
-<!-- Buy 18+ Guide Link -->
-<a href="https://buy.stripe.com/eVq00bbw49832s49uO9bO0j" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-full bg-gradient-to-r from-brand-primary via-brand-bright to-brand-accent hover:opacity-95 text-white text-xs font-bold uppercase tracking-wider transition-all">
-    <i class="fa-solid fa-shield-halved text-[10px]"></i>
-    <span>18+ Guide</span>
-</a>
-      <!-- Before & Afters Button Link (Pill Style) -->
-<a href="our-creators.html" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-full border border-white/10 bg-brand-primary/20 hover:bg-brand-primary/60 text-white text-xs font-bold uppercase tracking-wider transition-all">
-    <i class="fa-solid fa-chart-line text-[10px] text-brand-accent"></i>
-    <span>Before & Afters</span>
-</a>
-      <li class="nav-cta"><a class="btn btn-primary" href="#booking">Book a consultation</a></li>
+      <li><a href="#booking" class="btn btn-primary" style="padding:.5rem 1rem;font-size:.85rem;">Book a consultation</a></li>
     </ul>
     <a class="btn btn-primary" href="#booking">Book a consultation</a>
   </div>
@@ -182,12 +158,11 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
 <!-- HERO: Banner Image -->
 <section class="hero" id="top">
     <div class="wrap hero-inner">
-        <!-- Paste your file name inside the src="" quotes below -->
-        <div class="hero-image-container">
-            <img src="LOGORED.jpeg" alt="Logo Red Banner" class="hero-banner-img">
+        <div class="hero-image-container" style="max-width:320px;margin:0 auto 1.5rem">
+            <img src="LOGORED.jpeg" alt="Logo Red Banner" class="hero-banner-img" style="border-radius:16px;box-shadow:var(--glow)">
         </div>
         <span class="tag">Female-owned and led. Based in Ontario.</span>
-        <h1>She shoots.<br><span class="metal"><em>She sells.</em></span><span></h1>
+        <h1>She shoots.<br><span class="metal"><em>She sells.</em></span></h1>
         <p>Launch kits, AI creator twins and step-by-step guides that help creators start strong...</p>
         <div class="cta-row">
             <a class="btn btn-primary" href="#booking" data-offer="setup">Book a free 1-on-1 call</a>
@@ -268,15 +243,27 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
         </ul>
         <a class="btn btn-primary" href="#booking" data-offer="twin">Get your AI twin</a>
       </div>
+      <div class="tier" style="border: 1px dashed rgba(233,199,180,.4); background: rgba(74,17,31,.25);">
+        <p class="role" style="margin:0 0 .4rem">Digital Playbook</p>
+        <h3>Brand Deal & UGC Pitch Kit</h3>
+        <div class="price">$29<small>Interactive fillable PDF playbook</small></div>
+        <ul>
+          <li>Interactive Rate Calculator & Deal Tracker with 30-Day Plan</li>
+          <li>10 copy-and-paste Pitch Scripts and subject line bank</li>
+          <li>Plug-and-play Media Kit Template and stat checklist</li>
+          <li>Negotiation Cheat Sheet for lowballs and exposure offers</li>
+          <li>Contract Red Flag Checklist with 14 clauses to catch</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://buy.stripe.com/28EdR16bKfwrgiU36q9bO0m" target="_blank" rel="noopener">Buy Pitch Kit</a>
+      </div>
     </div>
   </div>
 </section>
 
-
 <section id="extras" style="background:var(--wine)">
   <div class="wrap">
     <h2>Add a professional shoot day.</h2>
-    <p class="lead">Want the best content of yourself? Add it to any of the three offers above.</p>
+    <p class="lead">Want the best content of yourself? Add it to any of the offers above.</p>
     <div class="tiers" style="grid-template-columns:minmax(260px,480px)">
       <div class="tier feat">
         <h3>Professional shoot days</h3>
@@ -299,16 +286,15 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
       <a href="mailto:customexclusivesocials@gmail.com">customexclusivesocials@gmail.com</a>
     </div>
   </div>
-  <!-- Add real, permissioned testimonials here once you have them. -->
 </section>
 
 <section id="faq" style="background:var(--wine)">
   <div class="wrap" style="max-width:860px">
     <h2>Questions, answered.</h2>
-        <details><summary>Is the first call really free?</summary><p>Yes. The free 1-on-1 call is where we talk through your goals and decide whether the launch kit is right for you. You only pay if you choose to move forward.</p></details>
+    <details><summary>Is the first call really free?</summary><p>Yes. The free 1-on-1 call is where we talk through your goals and decide whether the launch kit is right for you. You only pay if you choose to move forward.</p></details>
     <details><summary>Do you take a share of my earnings?</summary><p>No. Every offer is a flat fee, and you keep 100% of what you earn.</p></details>
     <details><summary>Do I keep control of my accounts?</summary><p>Yes. Your accounts are in your name, and we set everything up and hand it over to you.</p></details>
-    <details><summary>Which offer is right for me?</summary><p>New to creating? Start with the launch kit. Prefer to learn and do it yourself? Grab the guide for your type of content: social media or 18+. Want a steady supply of content without shooting it all yourself? Get the AI twin.</p></details>
+    <details><summary>Which offer is right for me?</summary><p>New to creating? Start with the launch kit. Prefer to learn and do it yourself? Grab the guide for your type of content: social media, 18+, or our new Brand Deal & UGC Pitch Kit. Want a steady supply of content without shooting it all yourself? Get the AI twin.</p></details>
     <details><summary>Is the AI twin safe and consensual?</summary><p>Your twin is built only from your own likeness, after identity verification and your written consent. You approve content before it is posted, and we follow each platform's AI labeling rules. You can cancel anytime and ask us to delete your data.</p></details>
     <details><summary>What do I need to provide for my AI twin?</summary><p>Clear photos of your face and body, a short video of you talking and moving, and notes on your look and style. Your twin is ready in 7 days or less once we have everything, so the faster you send it, the faster you launch.</p></details>
   </div>
@@ -331,6 +317,7 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
           <option value="Free call: Creator Launch Kit ($200)" data-k="setup">Free call: creator launch kit ($200)</option>
           <option value="AI Content Creator Duplicate Twin ($200)" data-k="twin">AI creator duplicate twin ($200)</option>
           <option value="Professional Shoot Day ($300-$1500)" data-k="shoot">Professional shoot day</option>
+          <option value="Brand Deal & UGC Pitch Kit ($29)" data-k="pitchkit">Brand Deal & UGC Pitch Kit ($29)</option>
         </select></div>
       <div class="full"><label for="message">Your goals and handles</label><textarea id="message" name="message" rows="4" required placeholder="Your social channels, estimated monthly revenue in CAD, and any questions"></textarea></div>
       <div class="full"><button class="btn btn-primary" type="submit" style="width:100%">Send consultation request</button></div>
@@ -358,17 +345,6 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
   btn.addEventListener('click',function(){var o=list.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
   list.addEventListener('click',function(e){if(e.target.tagName==='A'){list.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
 
-  // Click-to-play reels: one at a time, loaded on demand
-  var reels=document.querySelectorAll('.reel');
-  reels.forEach(function(r){
-    var v=r.querySelector('video'),b=r.querySelector('button');
-    b.addEventListener('click',function(){
-      reels.forEach(function(o){if(o!==r){o.querySelector('video').pause();o.classList.remove('playing')}});
-      r.classList.add('playing');v.controls=true;v.play().catch(function(){r.classList.remove('playing')});
-    });
-    v.addEventListener('ended',function(){r.classList.remove('playing');v.controls=false});
-  });
-
   // Offer buttons preselect the form
   document.querySelectorAll('[data-offer]').forEach(function(a){
     a.addEventListener('click',function(){var o=document.querySelector('#offer option[data-k="'+a.dataset.offer+'"]');if(o)o.selected=true});
@@ -377,3 +353,5 @@ footer a{text-decoration:none}footer a:hover{color:var(--ivory)}
 </script>
 </body>
 </html>
+
+```
